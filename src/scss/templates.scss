@@ -1,0 +1,55 @@
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1436px;
+	padding: 0 20px;
+	&_header {
+		max-width: 1800px;
+		padding: 0 30px 0 35px;
+	}
+}
+
+.btn {
+	@include effra;
+	color: #fff;
+	padding: 20px 15px;
+	border-radius: 100px;
+	background: $orangeBtn;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 700;
+	text-align: center;
+	display: block;
+	&_violet {
+		background: $violet;
+	}
+	&_quiz {
+		padding: 15px;
+		font-size: 16px;
+		line-height: 19px;
+		width: 154px;
+	}
+	&:hover {
+		box-shadow: 0 0 5px $grey;
+	}
+}
+
+@media (max-width: 991px) {
+	.btn {
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.container {
+		&_header {
+			padding: 0 24px;
+		}
+	}
+}

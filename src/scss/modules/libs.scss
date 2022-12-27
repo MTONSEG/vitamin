@@ -1,0 +1,12 @@
+$orangeBtn: #FF7D4E;
+$orange: #F27E58;
+$violet: #6E5DDC;
+$grey: #808080;
+
+@mixin effra {
+	font-family: 'Effra';
+}
+@mixin d-flex-center {
+	display: flex;
+	align-items: center;
+}

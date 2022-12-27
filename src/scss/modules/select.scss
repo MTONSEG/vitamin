@@ -1,0 +1,61 @@
+.select {
+	position: relative;
+	&__header {
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		align-items: center;
+		transition: .2s;
+		&:hover {
+			background: rgba(51, 125, 90, 0.1);
+		}
+	}
+	&__current {
+		margin: 0 6px 0 0;
+	}
+	&__icon {
+		display: block;
+		transition: .3s;
+		margin: 5px 0 0 0;
+		width: 10px;
+		aspect-ratio: 10/6.25;
+	}
+	&__body {
+		right: 0;
+		top: 100%;
+		width: 100%;
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		transition: .3s;
+		z-index: 2;
+		background: #fff;
+	}
+	&__item {
+		cursor: pointer;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		color: #323232;
+		padding: 15px 17px 13px;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		border-bottom: 0;
+		&:last-child {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+		}
+		&:hover {
+			background: #337D5A;
+			color: #fff;
+		}
+	}
+	&._active .select__body {
+		opacity: 1;
+		visibility: visible;
+	}
+	&._active .select__header {
+		border-color: #337D5A;
+	}
+	&._active .select__icon {
+		transform: rotate(180deg);
+	}
+}

@@ -187,7 +187,7 @@ aside {
 html,
 body {
   color: #000;
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -260,6 +260,8 @@ h6 {
 
 /*--------------------*/
 .wrapper {
+  max-width: 2560px;
+  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -275,14 +277,23 @@ h6 {
   padding: 0 30px 0 35px;
 }
 
+.big-title {
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 68px;
+}
+.big-title span {
+  color: #F27E58;
+}
+
 .btn {
   font-family: "Effra";
   color: #fff;
-  padding: 20px 15px;
+  padding: 17px 15px;
   border-radius: 100px;
   background: #FF7D4E;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 23px;
+  line-height: 169%;
   font-weight: 700;
   text-align: center;
   display: block;
@@ -291,18 +302,42 @@ h6 {
   background: #6E5DDC;
 }
 .btn_quiz {
-  padding: 15px;
+  padding: 15.5px;
   font-size: 16px;
   line-height: 19px;
   width: 154px;
 }
 .btn:hover {
-  box-shadow: 0 0 5px #808080;
+  box-shadow: 0 0 10px #808080;
+}
+
+.shop-link {
+  font-family: "Effra";
+  color: #F27E58;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.shop-link::after {
+  content: url("../img/icons/arrow-r.svg");
+  display: block;
+  margin: 4px 0 0 0;
+}
+.shop-link:hover {
+  gap: 15px;
 }
 
 @media (max-width: 991px) {
   .btn:hover {
     box-shadow: none;
+  }
+  .big-title {
+    font-size: 38px;
+    line-height: 120.8%;
   }
 }
 @media (max-width: 767px) {
@@ -310,11 +345,31 @@ h6 {
     padding: 0 24px;
   }
 }
+@media (max-width: 575px) {
+  .btn {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 17px 15px 16px;
+  }
+  .big-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .shop-link {
+    font-size: 14px;
+  }
+  .shop-link::after {
+    content: url("../img/icons/arrow-r_m.svg");
+    margin: 2px 0 0;
+  }
+}
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 3;
 }
 .header__row, .header__nav {
   display: flex;
@@ -330,7 +385,7 @@ h6 {
   height: 50px;
 }
 .header__link {
-  margin: 0 30px 0 0;
+  margin: 0 36px 0 0;
 }
 .header__link:hover {
   transform: scale(1.1);
@@ -362,6 +417,9 @@ h6 {
 }
 
 @media (max-width: 991px) {
+  .header {
+    position: fixed;
+  }
   .header__link:hover {
     transform: scale(1);
   }
@@ -369,6 +427,7 @@ h6 {
 @media (max-width: 767px) {
   .header {
     border-bottom: 2px solid #EDEDED;
+    background: #fff;
   }
   .header__row {
     height: 70px;
@@ -399,10 +458,194 @@ h6 {
   }
   .burger__icon::before {
     content: "";
-    top: -6px;
+    top: -8px;
   }
   .burger__icon::after {
     content: "";
-    top: 6px;
+    top: 8px;
+  }
+}
+.hero,
+.body-hero,
+.body-hero__links,
+.image-hero {
+  display: flex;
+}
+
+.hero {
+  flex: 1 1 auto;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.hero__body, .hero__image {
+  width: 50%;
+}
+.hero__body {
+  background: #fff;
+}
+.hero__image {
+  background: #F9F9F9;
+}
+
+.body-hero {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 140px 38px 30px;
+  position: relative;
+  background: url("../img/hero_left-img-1.svg") 74.4% 0 no-repeat;
+}
+.body-hero__row {
+  margin: 0 0 120px 0;
+}
+.body-hero__title {
+  max-width: 660px;
+  margin-bottom: 35px;
+}
+.body-hero__text {
+  font-size: 20px;
+  line-height: 163.42%;
+  color: #808080;
+  max-width: 467px;
+  margin-bottom: 51px;
+}
+.body-hero__quiz {
+  display: block;
+  width: 260px;
+  margin: 0 33px 0 0;
+}
+
+.image-hero {
+  align-items: center;
+  justify-content: center;
+  padding: 140px 0 40px;
+  position: relative;
+}
+.image-hero__violet-circle, .image-hero__orange-circle {
+  border-radius: 100%;
+}
+.image-hero__orange-circle, .image-hero__image, .image-hero__absolute-img {
+  position: absolute;
+}
+.image-hero__violet-circle {
+  background: #8172DD;
+  width: 523px;
+  height: 523px;
+  margin: 0 0 100px 0;
+}
+.image-hero__orange-circle {
+  top: 171px;
+  right: 74px;
+  height: 95px;
+  width: 95px;
+  background: #FFCA78;
+}
+.image-hero__image {
+  width: 100%;
+  max-width: 900px;
+  right: -124px;
+  z-index: 2;
+  margin: 97px 0 0 0;
+}
+.image-hero__image-wrap {
+  display: none;
+}
+.image-hero__absolute-img {
+  left: 0;
+  bottom: 38px;
+  z-index: 3;
+  transform: translateX(-50%);
+}
+.image-hero__absolute-img._m {
+  display: none;
+}
+
+@media (min-width: 1920px) {
+  .body-hero__title {
+    max-width: 700px;
+  }
+  .image-hero__image {
+    right: calc(50% - 150px);
+    transform: translate(50%);
+  }
+}
+@media (max-width: 1220px) {
+  .hero {
+    min-height: 100%;
+    flex-direction: column;
+  }
+  .hero__body, .hero__image {
+    width: 100%;
+    background: #fff;
+  }
+  .body-hero {
+    align-items: center;
+    text-align: center;
+    padding: 220px 38px 30px;
+    background: url(../img/hero_left-img-1_m.svg) 100% 87% no-repeat;
+  }
+  .body-hero__row {
+    margin: 0;
+  }
+  .body-hero__text {
+    margin: 0 auto 48px;
+  }
+  .body-hero__links {
+    align-items: center;
+    flex-direction: column;
+  }
+  .body-hero__quiz {
+    margin: 0 0 15px 0;
+  }
+  .image-hero {
+    padding: 0;
+  }
+  .image-hero__violet-circle, .image-hero__orange-circle, .image-hero__absolute-img._pc {
+    display: none;
+  }
+  .image-hero__absolute-img._m {
+    display: block;
+  }
+  .image-hero__image {
+    margin: 0;
+    position: static;
+    transform: translateX(120px);
+  }
+  .image-hero__absolute-img {
+    top: 7px;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 575px) {
+  .body-hero {
+    padding: 110px 20px 33px;
+  }
+  .body-hero__title {
+    margin-bottom: 15px;
+  }
+  .body-hero__text {
+    font-size: 14px;
+    margin-bottom: 19px;
+  }
+  .body-hero__quiz {
+    width: 154px;
+  }
+  .image-hero__block {
+    background: #000;
+    height: 303px;
+  }
+  .image-hero__image {
+    transform: translateX(90px);
+  }
+}
+@media (max-width: 375px) {
+  .image-hero__image {
+    display: none;
+  }
+  .image-hero__image-wrap {
+    display: block;
+    background: url(../img/hero__image_mob.png) 0 0/100% no-repeat;
+    height: 292px;
+    width: 100%;
   }
 }

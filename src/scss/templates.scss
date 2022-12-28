@@ -1,4 +1,6 @@
 .wrapper {
+	max-width: 2560px;
+	margin: 0 auto;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -14,14 +16,23 @@
 	}
 }
 
+.big-title {
+	font-weight: 500;
+	font-size: 56px;
+	line-height: 68px;
+	span {
+		color: $orange;
+	}
+}
+
 .btn {
 	@include effra;
 	color: #fff;
-	padding: 20px 15px;
+	padding: 17px 15px;
 	border-radius: 100px;
 	background: $orangeBtn;
-	font-size: 20px;
-	line-height: 24px;
+	font-size: 23px;
+	line-height: 169%;
 	font-weight: 700;
 	text-align: center;
 	display: block;
@@ -29,13 +40,33 @@
 		background: $violet;
 	}
 	&_quiz {
-		padding: 15px;
+		padding: 15.5px;
 		font-size: 16px;
 		line-height: 19px;
 		width: 154px;
 	}
 	&:hover {
-		box-shadow: 0 0 5px $grey;
+		box-shadow: 0 0 10px $grey;
+	}
+}
+
+.shop-link {
+	font-family: 'Effra';
+	color: $orange;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	&::after {
+		content: url('@img/icons/arrow-r.svg');
+		display: block;
+		margin: 4px 0 0 0;
+	}
+	&:hover {
+		gap: 15px;
 	}
 }
 
@@ -45,11 +76,35 @@
 			box-shadow: none;
 		}
 	}
+	.big-title {
+		font-size: 38px;
+		line-height: 120.8%;
+	}
 }
 @media (max-width: 767px) {
 	.container {
 		&_header {
 			padding: 0 24px;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.btn {
+		font-size: 16px;
+		line-height: 19px;
+		padding: 17px 15px 16px;
+	}
+	.big-title {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 29px;
+	}
+	.shop-link {
+		font-size: 14px;
+		&::after {
+			content: url('@img/icons/arrow-r_m.svg');
+			margin: 2px 0 0;
 		}
 	}
 }

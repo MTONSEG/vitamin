@@ -353,8 +353,6 @@ h6 {
   }
   .big-title {
     font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
   }
   .shop-link {
     font-size: 14px;
@@ -362,6 +360,12 @@ h6 {
   .shop-link::after {
     content: url("../img/icons/arrow-r_m.svg");
     margin: 2px 0 0;
+  }
+}
+@media (max-width: 375px) {
+  .big-title {
+    font-size: 24px;
+    line-height: 29px;
   }
 }
 .header {
@@ -468,17 +472,24 @@ h6 {
 .hero,
 .body-hero,
 .body-hero__links,
-.image-hero {
+.image-hero,
+.main__row,
+.left-main,
+.right-main__item {
   display: flex;
+}
+
+.hero__body,
+.hero__image,
+.main__left,
+.main__right {
+  width: 50%;
 }
 
 .hero {
   flex: 1 1 auto;
   min-height: 100vh;
   overflow: hidden;
-}
-.hero__body, .hero__image {
-  width: 50%;
 }
 .hero__body {
   background: #fff;
@@ -560,6 +571,78 @@ h6 {
   display: none;
 }
 
+.left-main {
+  background: url("../img/main-left_bg.svg") no-repeat, #8172DD;
+  justify-content: flex-end;
+  padding: 356px 135px 401px 20px;
+  position: relative;
+}
+.left-main__title {
+  max-width: 563px;
+  color: #fff;
+}
+.left-main__orange-circle {
+  position: absolute;
+  top: 65px;
+  left: 14.1%;
+  width: 139px;
+  height: 139px;
+  background: #FFCA78;
+  border-radius: 100%;
+}
+
+.right-main {
+  padding: 224px 20px 40px 61px;
+  background: #fff;
+}
+.right-main__item {
+  align-items: center;
+  margin: 0 0 128px 0;
+  padding: 0 0 0 193px;
+  position: relative;
+}
+.right-main__item-text {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  max-width: 444px;
+}
+.right-main__item::before {
+  position: absolute;
+  left: 0;
+}
+.right-main__item:first-child::before {
+  content: url("../img/icons/main-item-1.svg");
+}
+.right-main__item:nth-child(2)::before {
+  content: url("../img/icons/main-item-2.svg");
+  left: 8px;
+}
+.right-main__item:last-child {
+  margin: 0;
+}
+.right-main__item:last-child::before {
+  content: url("../img/icons/main-item-3.svg");
+  left: 9px;
+}
+
+.img-main__row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+}
+.img-main__small {
+  transform: translate(0, -200px);
+  display: block;
+  flex: 1 1 20%;
+}
+.img-main__big {
+  display: block;
+  transform: translate(-54px, -101px);
+  flex: 1 1 40%;
+}
+
 @media (min-width: 1920px) {
   .body-hero__title {
     max-width: 700px;
@@ -598,7 +681,7 @@ h6 {
     margin: 0 0 15px 0;
   }
   .image-hero {
-    padding: 0;
+    padding: 0 0 11px 0;
   }
   .image-hero__violet-circle, .image-hero__orange-circle, .image-hero__absolute-img._pc {
     display: none;
@@ -614,6 +697,46 @@ h6 {
   .image-hero__absolute-img {
     top: 7px;
     transform: translateX(0);
+  }
+  .left-main {
+    padding: 150px 20px;
+    align-items: center;
+  }
+  .left-main__orange-circle {
+    top: 40px;
+    width: 60px;
+    height: 60px;
+  }
+  .right-main {
+    padding: 100px 20px;
+  }
+  .right-main__item {
+    padding: 0 0 0 150px;
+  }
+}
+@media (max-width: 991px) {
+  .main__row {
+    flex-direction: column;
+  }
+  .main__left, .main__right {
+    width: 100%;
+  }
+  .left-main {
+    justify-content: center;
+    padding: 70px 20px;
+  }
+  .left-main__title {
+    text-align: center;
+  }
+  .left-main__orange-circle {
+    top: -30px;
+    left: calc(100% - 77px);
+  }
+  .right-main {
+    padding: 43px 20px 100px;
+  }
+  .right-main__item {
+    margin-bottom: 46px;
   }
 }
 @media (max-width: 575px) {
@@ -637,6 +760,24 @@ h6 {
   .image-hero__image {
     transform: translateX(90px);
   }
+  .right-main__item {
+    padding: 0 0 0 72px;
+  }
+  .right-main__item-text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .right-main__item:first-child::before {
+    content: url("../img/icons/main-item-1_m.svg");
+  }
+  .right-main__item:nth-child(2)::before {
+    content: url("../img/icons/main-item-2_m.svg");
+    left: 4px;
+  }
+  .right-main__item:last-child::before {
+    content: url("../img/icons/main-item-3_m.svg");
+    left: 4px;
+  }
 }
 @media (max-width: 375px) {
   .image-hero__image {
@@ -644,8 +785,13 @@ h6 {
   }
   .image-hero__image-wrap {
     display: block;
-    background: url(../img/hero__image_mob.png) 0 0/100% no-repeat;
+    background: url("../img/hero__image_mob.png") 0 0/100% no-repeat;
     height: 292px;
     width: 100%;
+  }
+  .left-main {
+    background-image: url("../img/main-left_bg_m.svg");
+    background-size: cover;
+    background-position: center;
   }
 }

@@ -42,9 +42,6 @@
 		margin-bottom: 35px;
 	}
 	&__text {
-		font-size: 20px;
-		line-height: 163.42%;
-		color: $grey;
 		max-width: 467px;
 		margin-bottom: 51px;
 	}
@@ -159,6 +156,7 @@
 }
 
 .img-main {
+	margin-bottom: 118px;
 	&__row {
 		height: 400px;
 	}
@@ -182,6 +180,49 @@
 		left: 20px;
 		top: -279px;
 		z-index: 1;
+	}
+}
+
+.about {
+	margin-bottom: 150px;
+	background: url("../img/about-eclipse.svg") 9% 18px no-repeat, #fff;
+	position: relative;
+	&__row {
+		position: relative;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 780px;
+		margin: 0 auto;
+		z-index: 1;
+	}
+	&__icon {
+		display: block;
+		margin: 0 0 50px;
+		width: 99px;
+		height: 99px;
+	}
+	&__title {
+		margin-bottom: 31px;
+	}
+	&__text {
+		margin-bottom: 51px;
+	}
+	&__circle {
+		position: absolute;
+		width: 95px;
+		height: 95px;
+		background: #8172DD;
+		right: 12.4%;
+		top: 4px;
+		border-radius: 100%;
+		z-index: 1;
+	}
+	&__bg-img {
+		position: absolute;
+		right: 0px;
+		top: -241px;
 	}
 }
 @media (min-width: 1920px) {
@@ -310,10 +351,8 @@
 		}
 	}
 	.img-main {
+		margin-bottom: 50px;
 		padding: 50px 0;
-		&__row {
-			
-		}
 		&__big-image {
 			top: 6px;
 			right: 0;
@@ -324,6 +363,19 @@
 			left: 0;
 			width: 53.9%;
 			padding: 0 0 46.2% 0;
+		}
+	}
+
+	.about {
+		background: #fff;
+		&__circle {
+			right: 0;
+			width: 30px;
+			height: 60px;
+			border-radius: 60px 0 0 60px;
+		}
+		&__bg-img {
+			top: 0;
 		}
 	}
 }
@@ -338,7 +390,6 @@
 			margin-bottom: 15px;
 		}
 		&__text {
-			font-size: 14px;
 			margin-bottom: 19px;
 		}
 		&__quiz {
@@ -375,6 +426,20 @@
 			}
 		}
 	}
+
+	.img-main {
+		margin-bottom: 36px;
+		&__row {
+			height: 200px;
+		}
+	}
+
+	.about {
+		&__icon {
+			width: 50px;
+			height: 50px;
+		}
+	}
 }
 
 @media (max-width: 375px) {
@@ -396,11 +461,30 @@
 	}
 
 	.img-main {
+		padding: 50px 0 0;
 		&__big-image {
 			background-image: url('@img/img-main_big_mob.jpg');
 		}
 		&__small-image {
 			background-image: url('@img/img-main_small_mob.jpg');
+		}
+	}
+
+	.about {
+		&__title {
+			margin-bottom: 15px;
+		}
+		&__text {
+			margin-bottom: 27px;
+		}
+		&__icon {
+			margin: 0 0 30px;
+		}
+		&__circle {
+			top: -35px;
+		}
+		&__bg-img {
+			top: 129px;
 		}
 	}
 }

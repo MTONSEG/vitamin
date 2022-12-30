@@ -289,6 +289,12 @@ h6 {
   color: #F27E58;
 }
 
+.text {
+  font-size: 20px;
+  line-height: 163.42%;
+  color: #808080;
+}
+
 .btn {
   font-family: "Effra";
   color: #fff;
@@ -356,6 +362,9 @@ h6 {
   }
   .big-title {
     font-weight: 500;
+  }
+  .text {
+    font-size: 14px;
   }
   .shop-link {
     font-size: 14px;
@@ -517,9 +526,6 @@ h6 {
   margin-bottom: 35px;
 }
 .body-hero__text {
-  font-size: 20px;
-  line-height: 163.42%;
-  color: #808080;
   max-width: 467px;
   margin-bottom: 51px;
 }
@@ -629,6 +635,9 @@ h6 {
   left: 9px;
 }
 
+.img-main {
+  margin-bottom: 118px;
+}
 .img-main__row {
   height: 400px;
 }
@@ -651,6 +660,49 @@ h6 {
   left: 20px;
   top: -279px;
   z-index: 1;
+}
+
+.about {
+  margin-bottom: 150px;
+  background: url("../img/about-eclipse.svg") 9% 18px no-repeat, #fff;
+  position: relative;
+}
+.about__row {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 780px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.about__icon {
+  display: block;
+  margin: 0 0 50px;
+  width: 99px;
+  height: 99px;
+}
+.about__title {
+  margin-bottom: 31px;
+}
+.about__text {
+  margin-bottom: 51px;
+}
+.about__circle {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  background: #8172DD;
+  right: 12.4%;
+  top: 4px;
+  border-radius: 100%;
+  z-index: 1;
+}
+.about__bg-img {
+  position: absolute;
+  right: 0px;
+  top: -241px;
 }
 
 @media (min-width: 1920px) {
@@ -758,6 +810,7 @@ h6 {
     margin-bottom: 46px;
   }
   .img-main {
+    margin-bottom: 50px;
     padding: 50px 0;
   }
   .img-main__big-image {
@@ -771,6 +824,18 @@ h6 {
     width: 53.9%;
     padding: 0 0 46.2% 0;
   }
+  .about {
+    background: #fff;
+  }
+  .about__circle {
+    right: 0;
+    width: 30px;
+    height: 60px;
+    border-radius: 60px 0 0 60px;
+  }
+  .about__bg-img {
+    top: 0;
+  }
 }
 @media (max-width: 575px) {
   .body-hero {
@@ -780,7 +845,6 @@ h6 {
     margin-bottom: 15px;
   }
   .body-hero__text {
-    font-size: 14px;
     margin-bottom: 19px;
   }
   .body-hero__quiz {
@@ -811,6 +875,16 @@ h6 {
     content: url("../img/icons/main-item-3_m.svg");
     left: 4px;
   }
+  .img-main {
+    margin-bottom: 36px;
+  }
+  .img-main__row {
+    height: 200px;
+  }
+  .about__icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 @media (max-width: 375px) {
   .image-hero__image {
@@ -827,10 +901,28 @@ h6 {
     background-size: cover;
     background-position: center;
   }
+  .img-main {
+    padding: 50px 0 0;
+  }
   .img-main__big-image {
     background-image: url("../img/img-main_big_mob.jpg");
   }
   .img-main__small-image {
     background-image: url("../img/img-main_small_mob.jpg");
+  }
+  .about__title {
+    margin-bottom: 15px;
+  }
+  .about__text {
+    margin-bottom: 27px;
+  }
+  .about__icon {
+    margin: 0 0 30px;
+  }
+  .about__circle {
+    top: -35px;
+  }
+  .about__bg-img {
+    top: 129px;
   }
 }

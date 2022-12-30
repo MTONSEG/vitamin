@@ -28,6 +28,12 @@
 	}
 }
 
+.text {
+	font-size: 20px;
+	line-height: 163.42%;
+	color: $grey;
+}
+
 .btn {
 	@include effra;
 	color: #fff;
@@ -100,6 +106,9 @@
 	}
 	.big-title {
 		font-weight: 500;
+	}
+	.text {
+		font-size: 14px;
 	}
 	.shop-link {
 		font-size: 14px;

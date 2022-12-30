@@ -276,6 +276,9 @@ h6 {
   max-width: 1800px;
   padding: 0 30px 0 35px;
 }
+.container_main {
+  position: relative;
+}
 
 .big-title {
   font-weight: 500;
@@ -627,20 +630,27 @@ h6 {
 }
 
 .img-main__row {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  flex-direction: row-reverse;
+  height: 400px;
 }
-.img-main__small {
-  transform: translate(0, -200px);
-  display: block;
-  flex: 1 1 20%;
+.img-main__big-image, .img-main__small-image {
+  position: absolute;
 }
-.img-main__big {
-  display: block;
-  transform: translate(-54px, -101px);
-  flex: 1 1 40%;
+.img-main__big-image {
+  background: url("../img/img-main_big.jpg") center/cover no-repeat;
+  width: 55.8%;
+  max-width: 801px;
+  padding: 0 0 32.73% 0;
+  left: 34.5%;
+  top: -102px;
+}
+.img-main__small-image {
+  background: url("../img/img-main_small.jpg") center/cover no-repeat;
+  width: 37%;
+  max-width: 530px;
+  padding: 0 0 31.338% 0;
+  left: 20px;
+  top: -279px;
+  z-index: 1;
 }
 
 @media (min-width: 1920px) {
@@ -713,6 +723,15 @@ h6 {
   .right-main__item {
     padding: 0 0 0 150px;
   }
+  .img-main__big-image {
+    top: 0;
+    left: auto;
+    right: 60px;
+  }
+  .img-main__small-image {
+    top: -60px;
+    left: 60px;
+  }
 }
 @media (max-width: 991px) {
   .main__row {
@@ -733,10 +752,24 @@ h6 {
     left: calc(100% - 77px);
   }
   .right-main {
-    padding: 43px 20px 100px;
+    padding: 43px 20px 63px;
   }
   .right-main__item {
     margin-bottom: 46px;
+  }
+  .img-main {
+    padding: 50px 0;
+  }
+  .img-main__big-image {
+    top: 6px;
+    right: 0;
+    width: 78.2%;
+    padding: 0 0 45.56% 0;
+  }
+  .img-main__small-image {
+    left: 0;
+    width: 53.9%;
+    padding: 0 0 46.2% 0;
   }
 }
 @media (max-width: 575px) {
@@ -793,5 +826,11 @@ h6 {
     background-image: url("../img/main-left_bg_m.svg");
     background-size: cover;
     background-position: center;
+  }
+  .img-main__big-image {
+    background-image: url("../img/img-main_big_mob.jpg");
+  }
+  .img-main__small-image {
+    background-image: url("../img/img-main_small_mob.jpg");
   }
 }

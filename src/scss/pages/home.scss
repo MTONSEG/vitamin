@@ -184,7 +184,7 @@
 }
 
 .about {
-	margin-bottom: 150px;
+	margin-bottom: 152px;
 	background: url("../img/about-eclipse.svg") 9% 18px no-repeat, #fff;
 	position: relative;
 	&__row {
@@ -223,6 +223,172 @@
 		position: absolute;
 		right: 0px;
 		top: -241px;
+	}
+}
+
+.choose {
+	position: relative;
+	padding: 151px 0 180px;
+	margin: 0 0 49px 0;
+	&__row {
+		display: flex;
+	}
+	&__slider {
+		width: 75.045%;
+		overflow: hidden;
+	}
+	&__body {
+		position: relative;
+		width: 40%;
+		margin: 84px 0 0 119px;
+	}
+	&__body-image {
+		position: absolute;
+		right: 0;
+		top: calc(100% + 75px);
+		width: 444px;
+		height: 416px;
+	}
+	&__title,
+	&__text,
+	& .shop-link {
+		color: #fff;
+	}
+	&__title {
+		margin-bottom: 29px;
+	}
+	&__text {
+		margin-bottom: 33px;
+	}
+	& .shop-link {
+		margin: 0 0 0 5px;
+		&::after {
+			content: url('@img/icons/arrow-r_white.svg');
+		}
+	}
+
+	&__orange {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		background: #E99478;
+		z-index: -1;
+	}
+}
+
+.slider-choose {
+	&__slide {
+		padding: 64px 30px 38px;
+		border-radius: 16px;
+		background: #89D4A7;
+		cursor: pointer;
+		transition: .3s;
+		&:hover {
+			box-shadow: inset 0 0 6px #9C91E0;
+		}
+		&_violet {
+			background: #9C91E0;
+			&:hover {
+				box-shadow: inset 0 0 20px #89D4A7;
+			}
+		}
+	}
+	&__image-wrapper {
+		margin-bottom: 52px;
+	}
+	&__image {
+		display: block;
+		max-width: 100%;
+		height: 100%;
+		object-fit: cover;
+		margin: 0 auto;
+	}
+	&__category {
+		font-weight: 600;
+		line-height: 19px;
+		color: rgb(255, 255, 255, 0.5);
+		margin-bottom: 13px;
+	}
+	&__title {
+		color: #fff;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 29px;
+		margin-bottom: 17px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 163.42%;
+		color: rgb(255, 255, 255, 0.7);
+	}
+}
+
+.comments {
+	margin-bottom: 100px;
+	&__head {
+		max-width: 670px;
+		margin-bottom: 80px;
+	}
+	&__icon {
+		width: 86px;
+		height: 97.7px;
+		margin-bottom: 41px;
+	}
+	&__title {
+		margin-bottom: 31px;
+	}
+}
+
+.slider-comments {
+	overflow: hidden;
+	height: 360px;
+	&__slide {
+		background: #FAF8F6;
+		border-radius: 16px;
+		padding: 40px 30px 30px 32px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__body {
+		flex: 1 1 auto;
+	}
+	&__rating {
+		margin-bottom: 20px;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 14px;
+	}
+	&__text {
+		font-size: 16px;
+		line-height: 28px;
+		margin-bottom: 20px;
+	}
+	&__user {
+		display: flex;
+		align-items: center;
+	}
+	&__image-wrap {
+		border-radius: 100%;
+		overflow: hidden;
+		height: 48px;
+		width: 48px;
+		margin: 0 15px 0 0;
+	}
+	&__image {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	&__name {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 22px;
 	}
 }
 @media (min-width: 1920px) {
@@ -320,6 +486,65 @@
 			left: 60px;
 		}
 	}
+
+	.about {
+		margin-bottom: 45px;
+	}
+
+	.choose {
+		padding: 59px 0;
+		& .container {
+			padding: 0;
+		}
+		&__row {
+			flex-direction: column-reverse;
+		}
+		&__body-image {
+			display: none;
+		}
+		&__slider,
+		&__body {
+			padding: 0 20px;
+			margin: 0;
+			width: 100%;
+		}
+		&__body {
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0 0 33px 0;
+		}
+		&__text {
+			max-width: 700px;
+		}
+		&__orange {
+			width: 100%;
+			height: 56%;
+		}
+		& .shop-link {
+			margin: 0;
+		}
+	}
+
+	.comments {
+		&__head {
+			margin: 0 auto 80px;
+			text-align: center;
+		}
+		&__list {
+			& .container {
+				padding: 0;
+			}
+		}
+	}
+
+	.slider-comments {
+		padding: 0 20px;
+		&__slide {
+			width: 400px;
+		}
+	}
 }
 @media (max-width: 991px) {
 	.main {
@@ -378,11 +603,13 @@
 			top: 0;
 		}
 	}
+
+	.slider-choose {
+		&__slide {
+			width: 400px;
+		}
+	}
 }
-// @media (max-width: 767px) {
-
-// }
-
 @media (max-width: 575px) {
 	.body-hero {
 		padding: 110px 20px 33px;
@@ -440,8 +667,86 @@
 			height: 50px;
 		}
 	}
-}
 
+	.choose {
+		margin: 0 0 2px 0;
+		&__title {
+			margin-bottom: 13px;
+		}
+		&__text {
+			margin-bottom: 18px;
+		}
+		& .shop-link {
+			&::after {
+				content: url("@img/icons/arrow-r_white_m.svg");
+			}
+		}
+	}
+
+	.slider-choose__slide,
+	.slider-comments__slide {
+		width: 100%;
+		max-width: 335px;
+		min-width: 280px;
+	}
+
+	.slider-choose {
+		&__slide {
+			padding: 30px 20px;
+		}
+		&__image-wrapper {
+			height: 162px;
+			margin-bottom: 24px;
+		}
+		&__category {
+			font-size: 12px;
+			line-height: 16px;
+		}
+		&__title {
+			font-size: 18px;
+			line-height: 22px;
+		}
+		&__text {
+			font-size: 14px;
+			line-height: 19px;
+		}
+	}
+
+	.comments {
+		&__head {
+			margin: 0 auto 34px;
+		}
+		&__icon {
+			width: 50px;
+			height: 56.8px;
+			margin-bottom: 26px;
+		}
+		&__title {
+			margin-bottom: 10px;
+		}
+	}
+
+	.slider-comments {
+		&__slide {
+			padding: 30px 20px 23px 20px;
+		}
+		&__rating {
+			margin-bottom: 13px;
+		}
+		&__title {
+			font-size: 16px;
+			line-height: 19px;
+		}
+		&__text {
+			font-size: 14px;
+			line-height: 24px;
+		}
+		&__name {
+			font-size: 14px;
+			line-height: 19px;			
+		}
+	}
+}
 @media (max-width: 375px) {
 	.image-hero {
 		&__image {

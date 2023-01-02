@@ -4,7 +4,11 @@
 .image-hero,
 .main__row,
 .left-main,
-.right-main__item {
+.right-main__item,
+.about__row,
+.choose__row,
+.slider-comments__slide,
+.slider-comments__user {
 	display: flex;
 }
 
@@ -190,7 +194,6 @@
 	&__row {
 		position: relative;
 		text-align: center;
-		display: flex;
 		flex-direction: column;
 		align-items: center;
 		max-width: 780px;
@@ -224,15 +227,15 @@
 		right: 0px;
 		top: -241px;
 	}
+	&__btn {
+		margin: 0 0 0 0;
+	}
 }
 
 .choose {
 	position: relative;
 	padding: 151px 0 180px;
 	margin: 0 0 49px 0;
-	&__row {
-		display: flex;
-	}
 	&__slider {
 		width: 75.045%;
 		overflow: hidden;
@@ -348,7 +351,6 @@
 		background: #FAF8F6;
 		border-radius: 16px;
 		padding: 40px 30px 30px 32px;
-		display: flex;
 		flex-direction: column;
 	}
 	&__body {
@@ -369,7 +371,6 @@
 		margin-bottom: 20px;
 	}
 	&__user {
-		display: flex;
 		align-items: center;
 	}
 	&__image-wrap {
@@ -391,6 +392,45 @@
 		line-height: 22px;
 	}
 }
+
+.ready {
+	position: relative;
+	margin-bottom: 100px;
+	& .about {
+		&__row {
+			max-width: 900px;
+		}
+		&__icon {
+			width: 97px;
+			height: 89.5px;
+			margin: 0 0 49px;
+		}
+		&__title {
+			margin-bottom: 37px;
+		}
+		&__text {
+			margin-bottom: 50px;
+		}
+		&__btn {
+			margin-bottom: 31px;
+		}
+	}
+
+	&__eclipse {
+		position: absolute;
+		&_1 {
+			top: 90px;
+			left: 6.9%;
+		}
+		&_2 {
+			top: -22px;
+			right: 0;
+		}
+	}
+
+}
+
+
 @media (min-width: 1920px) {
 	.body-hero {
 		&__title {
@@ -528,6 +568,7 @@
 	}
 
 	.comments {
+		margin-bottom: 58px;
 		&__head {
 			margin: 0 auto 80px;
 			text-align: center;
@@ -607,6 +648,38 @@
 	.slider-choose {
 		&__slide {
 			width: 400px;
+		}
+	}
+
+	.ready {
+		& .about {
+			&__icon {
+				width: 49.8px;
+				height: 46px;
+				margin: 0 0 30px;
+			}
+			&__title {
+				margin-bottom: 14px;
+			}
+			&__text {
+				margin-bottom: 21px;
+			}
+			&__btn {
+				margin-bottom: 15px;
+			}
+		}
+		&__eclipse {
+			&_1 {
+				top: calc(100% + 40px);
+				left: auto;
+				right: -4px;
+				z-index: 1;
+			}
+			&_2 {
+				right: auto;
+				left: 0;
+				top: -15px;
+			}
 		}
 	}
 }

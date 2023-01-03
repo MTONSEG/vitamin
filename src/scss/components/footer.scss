@@ -58,7 +58,6 @@
 		&._fb {
 			&::before {
 				content: url('@img/icons/fb.svg');
-
 			}
 		}
 		&._insta {
@@ -73,15 +72,12 @@
 		bottom: 0;
 		left: 0;
 		max-width: 124px;
-		font-size: 12px;
-		line-height: 16px;
-		color: rgba(0, 0, 0, 0.3);
 	}
 }
 
 @media (max-width: 991px) {
 	.footer {
-		padding: 40px 0 74px;
+		padding: 40px 0;
 		&__row {
 			flex-direction: column;
 		}
@@ -104,9 +100,6 @@
 
 @media (max-width: 767px) {
 	.footer {
-		&__logo {
-
-		}
 		&__shop-list {
 			flex-direction: column;
 		}

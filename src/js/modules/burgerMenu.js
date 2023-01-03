@@ -1,22 +1,40 @@
-import { addClass,removeClass} from "./functions.js";
+import {toggleClass, addClass, removeClass} from "./functions.js";
 
-const iconBurger = document.querySelector('.burger__icon');
-const menuBurger = document.querySelector('.burger-menu');
-const closeBtn = document.querySelector('.burger-menu__close-btn');
-const body = document.querySelector('body');
+const iconBurger = document.querySelector('.burger');
+const menuBurger = document.querySelector('.menu');
+const body = document.querySelector('body'); 
 
 if (iconBurger) {
 	iconBurger.addEventListener('click', event => {
-		addClass(iconBurger, '_active');
-		addClass(menuBurger, '_active');
-		addClass(body, '_lock');
+		toggleClass(iconBurger, '_active');
+		toggleClass(menuBurger, '_active');
+		toggleClass(body, '_lock');
 	})
 }
 
-if (closeBtn) {
-	closeBtn.addEventListener('click', event => {
-		removeClass(iconBurger, '_active');
-		removeClass(menuBurger, '_active');
-		removeClass(body, '_lock');
-	})
+const catalogsMenu = document.querySelectorAll('.catalog');
+
+if (catalogsMenu) {
+	const submenus = document.querySelectorAll('.submenu');
+
+	for (let item of catalogsMenu) {
+
+		item.addEventListener('click', e => {
+			let currentBtn = e.target.closest('.catalog');
+			let btnId = currentBtn.getAttribute('data-src')
+			let currentList = document.querySelector(btnId);
+
+			addClass(currentList, '_active');
+		})
+
+	}
+
+	for (let menu of submenus) {
+		let submenuCloseBtn = menu.querySelector('.submenu__back');
+
+		submenuCloseBtn.addEventListener('click', e => {
+			removeClass(menu, '_active');
+		})
+	}
 }
+

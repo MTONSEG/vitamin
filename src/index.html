@@ -4,28 +4,8 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
-			<div class="container container_header">
-				<div class="header__row">
-					<div class="header__burger burger">
-						<span class="burger__icon"></span>
-					</div>
-					<a href="index.html" class="header__logo">
-						<img loading="lazy" src="@img/icons/logo.svg" alt="Logo" class="header__logo-icon">
-					</a>
-					<nav class="header__nav">
-						<a href="#" class="header__link _profile">
-							<img loading="lazy" src="@img/icons/profile.svg" alt="profile" class="header__icon">
-						</a>
-						<a href="#" class="header__link _cart">
-							<img loading="lazy" src="@img/icons/cart.svg" alt="cart" class="header__icon">
-							<span></span>
-						</a>
-						<a href="#" class="header__btn btn btn_quiz">Take the quiz</a>
-					</nav>
-				</div>
-			</div>
-		</header>
+		@@include('./html/header.html',{})
+
 		<section class="hero">
 			<div class="hero__body body-hero">
 				<div class="body-hero__row">

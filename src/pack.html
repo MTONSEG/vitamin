@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./html/head.html',{title: "Персональный пак"})
+
+<body>
+	<div class="wrapper">
+		@@include('./html/header.html',{})
+
+		<section class="pack">
+			<div class="container">
+				<div class="pack__head">
+					<h1 class="pack__title">
+						Alex, we made personalized pack for you!
+					</h1>
+					<h2 class="pack__subtitle">
+						Recommenadation
+					</h2>
+					<p class="pack__text">
+						Your recommendation is based on your answers and our database of clinical research. This health plan, made just for you, is recommended for you to feel your best today while supporting long-term health.
+					</p>
+				</div>
+			</div>
+			<img src="@img/pack_eclipse-1.svg" alt="Eclipse 1" class="pack__eclipse pack__eclipse_1">
+			<img src="@img/pack_eclipse-2.svg" alt="Eclipse 2" class="pack__eclipse pack__eclipse_2">
+		</section>
+
+		<section class="list-pack">
+			<div class="container container_list-pack">
+				<div class="list-pack__row">
+					<div class="list-pack__orange-circle"></div>
+					<h2 class="list-pack__title">
+						Your Personalized Pack
+					</h2>
+					<ul class="list-pack__list">
+						<li class="list-pack__item item-pack">
+							<div class="item-pack__image-wrap">
+								<img loading="lazy" src="@img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
+							</div>
+							<div class="item-pack__body">
+								<p class="item-pack__category">
+									Vitamins & Dietary Supplements
+								</p>
+								<h3 class="item-pack__title">
+									Ortho Molecular Products Orthomega 820
+								</h3>
+								<p class="item-pack__price">
+									$61.98
+								</p>
+							</div>
+						</li>
+						<li class="list-pack__item item-pack">
+							<div class="item-pack__image-wrap">
+								<img loading="lazy" src="@img/pack_img-2.png" alt="Orho Molecular" class="item-pack__image">
+							</div>
+							<div class="item-pack__body">
+								<p class="item-pack__category item-pack__category_green">
+									Minerals
+								</p>
+								<h3 class="item-pack__title">
+									Ortho Molecular - Reacted Magnesium
+								</h3>
+								<p class="item-pack__price">
+									$61.98
+								</p>
+							</div>
+						</li>
+						<li class="list-pack__item item-pack">
+							<div class="item-pack__image-wrap">
+								<img loading="lazy" src="@img/pack_img-3.png" alt="Orho Molecular" class="item-pack__image">
+							</div>
+							<div class="item-pack__body">
+								<p class="item-pack__category">
+									Vitamins & Dietary Supplements
+								</p>
+								<h3 class="item-pack__title">
+									Ortho Molecular Products Orthomega 820
+								</h3>
+								<p class="item-pack__price">
+									$61.98
+								</p>
+							</div>
+						</li>
+						<li class="list-pack__item item-pack">
+							<div class="item-pack__image-wrap">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+							</div>
+							<div class="item-pack__body">
+								<p class="item-pack__category">
+									Vitamins & Dietary Supplements
+								</p>
+								<h3 class="item-pack__title">
+									Ortho Molecular Products - Reacted Selenium
+								</h3>
+								<p class="item-pack__price">
+									$61.98
+								</p>
+							</div>
+						</li>
+					</ul>
+
+					<a href="#" class="list-pack__btn btn">
+						Continue
+					</a>
+				</div>
+			</div>
+		</section>
+		
+		@@include('./html/footer.html',{})
+	</div>
+	<script src="./js/app.min.js" type="module"></script>
+</body>
+
+</html>

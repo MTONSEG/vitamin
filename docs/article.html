@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="image/png" sizes="16x16" rel="icon" href="./img/favicon.png">
+	<link media="all" rel="stylesheet" type="text/css" href="./css/style.min.css">
+	<title>404: Page not found</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header_white">
+	<div class="container container_header">
+		<div class="header__row">
+			<div class="header__burger burger">
+				<span class="burger__icon"></span>
+			</div>
+
+			<a href="index.html" class="header__logo">
+				<img loading="lazy" src="img/icons/logo.svg" alt="Logo" class="header__logo-icon">
+			</a>
+			<nav class="header__nav">
+				<a href="#" class="header__link _profile">
+					<img loading="lazy" src="img/icons/profile.svg" alt="profile" class="header__icon">
+				</a>
+				<a href="#" class="header__link _cart cart-link">
+					<img loading="lazy" src="img/icons/cart.svg" alt="cart" class="header__icon">
+					<span></span>
+				</a>
+				<a href="#" class="header__btn btn btn_quiz">Take the quiz</a>
+			</nav>
+
+			<div class="menu">
+				<nav class="menu__header">
+					<div data-src="#profile" class="menu__user catalog">
+						<img loading="lazy" src="img/icons/profile.svg" alt="profile" class="header__icon">
+					</div>
+				</nav>
+				<div class="menu__body">
+					<ul class="menu__list">
+						<li data-src="#shop" class="menu__item catalog">
+							<span>Shop</span>
+							<img src="img/icons/arrow-menu.svg" alt="arrow" class="menu__item-icon">
+						</li>
+						<li data-src="#info" class="menu__item catalog">
+							<span>Information</span>
+							<img src="img/icons/arrow-menu.svg" alt="arrow" class="menu__item-icon">
+						</li>
+						<a href="quiz.html" class="menu__item menu__item_quiz">Take the quiz</a>
+					</ul>
+					<div class="menu__footer">
+						<a href="mailto:support@medstogo.com" class="menu__email">
+							support@medstogo.com
+						</a>
+						<p class="menu__copy copy">
+							© 2020 Vitamins.com / All rights reserved
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="shop" class="submenu">
+				<div class="menu__header submenu__header">
+					<a href="#" class="submenu__back">
+						<img loading="lazy" src="img/icons/menu-back.svg" alt="back" class="submenu__back-icon">
+					</a>
+					<h1 class="submenu__title">
+						Shop
+					</h1>
+				</div>
+				<div class="menu__body">
+					<div class="menu__list">
+						<a href="#" class="menu__item">All categories</a>
+						<a href="#" class="menu__item">Vitamins & Dietary Supplements</a>
+						<a href="#" class="menu__item">Weight Loss</a>
+						<a href="#" class="menu__item">Minerals</a>
+						<a href="#" class="menu__item">Antioxidants</a>
+						<a href="#" class="menu__item">Probiotics</a>
+						<a href="#" class="menu__item">Pain Relief</a>
+						<a href="#" class="menu__item">Prenatal Vitamins</a>
+						<a href="#" class="menu__item menu__item_red">Sale%</a>
+					</div>
+					<div class="menu__footer">
+						<h3 class="submenu__footer-title">
+							Don’t know what vitamins your body needs?
+						</h3>
+						<p class="submenu__footer-text">
+							Answer a few simple questions and automaticallyget a personalazed list of vitamins in minutes
+						</p>
+						<a href="#" class="submenu__btn btn">
+							Take the quiz
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="info" class="submenu">
+				<div class="menu__header submenu__header">
+					<a href="#" class="submenu__back">
+						<img loading="lazy" src="img/icons/menu-back.svg" alt="back" class="submenu__back-icon">
+					</a>
+					<h1 class="submenu__title">
+						Information
+					</h1>
+				</div>
+				<div class="menu__body">
+					<div class="menu__list menu__list_no-border">
+						<a href="#" class="menu__item">Subscription Cycle & Billing</a>
+						<a href="#" class="menu__item">Terms & Conditions</a>
+						<a href="#" class="menu__item">Privacy Policy</a>
+						<a href="#" class="menu__item">Shipping & Delivery</a>
+						<a href="#" class="menu__item">Return Policy</a>
+					</div>
+				</div>
+			</div>
+			<div id="profile" class="submenu">
+				<div class="menu__header submenu__header">
+					<a href="#" class="submenu__back">
+						<img src="img/icons/menu-back.svg" alt="back" class="submenu__back-icon">
+					</a>
+					<h1 class="submenu__title">
+						Profile
+					</h1>
+				</div>
+				<div class="menu__body">
+					<div class="menu__list menu__list_no-border">
+						<a href="#" class="menu__item">Subscriptions</a>
+						<a href="#" class="menu__item">Orders</a>
+						<a href="#" class="menu__item">Account Overview</a>
+						<a href="#" class="menu__item">Payment methods</a>
+						<a href="#" class="menu__item">Change Password</a>
+						<a href="#" class="menu__item menu__item_red">Sign Out</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="cart">
+	<div class="cart__header">
+		<h3 class="cart__title">
+			Cart
+		</h3>
+		<a href="#" class="cart__close">
+			<img loading="lazy" src="img/icons/menu-close.svg" alt="close" class="cart__close-icon">
+		</a>
+	</div>
+	<div class="cart__body">
+		<ul class="cart__list">
+
+			<li class="cart__item item-cart">
+				<div class="item-cart__image-wrap _pink">
+					<img loading="lazy" src="img/cart_item-1.png" alt="Image Bottle" class="item-cart__image">
+				</div>
+				<div class="item-cart__body">
+					<div class="item-cart__head">
+						<h3 class="item-cart__title">
+							Ortho Molecular Products CereVive Capsules
+						</h3>
+						<a href="#" class="item-cart__del">
+							<img loading="lazy" src="img/icons/del.svg" alt="delete" class="item-cart__del-icon">
+						</a>
+					</div>
+					<div class="item-cart__amount">
+						<div class="item-cart__quantity quantity">
+							<button class="quantity__btn _minus">
+								<img loading="lazy" src="img/icons/minus.svg" alt="minus">
+							</button>
+							<input type="number" step="1" min="1" max="27" name="quantity" value="1" class="quantity__input">
+							<button class="quantity__btn  _plus">
+								<img loading="lazy" src="img/icons/plus.svg" alt="plus">
+							</button>
+						</div>
+						<p class="item-cart__price">
+							$84.00
+						</p>
+					</div>
+					<div class="item-cart__footer">
+						<div class="item-cart__checkbox checkbox">
+							<input type="checkbox" id="checkbox" class="checkbox__input">
+							<label for="checkbox" class="checkbox__custom">
+								Autoship every
+							</label>
+						</div>
+						<div class="item-cart__select">
+							<div class="select">
+								<div class="select__header">
+									<div class="select__current">30</div>
+									<img loading="lazy" src="img/icons/select_arr.svg" alt="icon" class="select__icon">
+								</div>
+								<ul class="select__body">
+									<li class="select__item">
+										<span>5</span>
+									</li>
+									<li class="select__item">
+										<span>15</span>
+									</li>
+									<li class="select__item">
+										<span>30</span>
+									</li>
+								</ul>
+							</div>
+							<p class="item-cart__select-text">days</p>
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<li class="cart__item item-cart">
+				<div class="item-cart__image-wrap _purple">
+					<img loading="lazy" src="img/cart_item-2.png" alt="Image Bottle" class="item-cart__image">
+				</div>
+				<div class="item-cart__body">
+					<div class="item-cart__head">
+						<h3 class="item-cart__title">
+							Standard Process Thymus PMG 90 Tablets
+						</h3>
+						<a href="#" class="item-cart__del">
+							<img loading="lazy" src="img/icons/del.svg" alt="delete" class="item-cart__del-icon">
+						</a>
+					</div>
+					<div class="item-cart__amount">
+						<div class="item-cart__quantity quantity">
+							<button class="quantity__btn _minus">
+								<img loading="lazy" src="img/icons/minus.svg" alt="minus">
+							</button>
+							<input type="number" step="1" min="1" max="27" name="quantity" value="1" class="quantity__input">
+							<button class="quantity__btn  _plus">
+								<img loading="lazy" src="img/icons/plus.svg" alt="plus">
+							</button>
+						</div>
+						<p class="item-cart__price">
+							$84.00
+						</p>
+					</div>
+					<div class="item-cart__footer">
+						<div class="item-cart__checkbox checkbox">
+							<input type="checkbox" id="checkbox-2" class="checkbox__input">
+							<label for="checkbox-2" class="checkbox__custom">
+								Autoship every
+							</label>
+						</div>
+						<div class="item-cart__select">
+							<div class="select">
+								<div class="select__header">
+									<div class="select__current">30</div>
+									<img loading="lazy" src="img/icons/select_arr.svg" alt="icon" class="select__icon">
+								</div>
+								<ul class="select__body">
+									<li class="select__item">
+										<span>5</span>
+									</li>
+									<li class="select__item">
+										<span>15</span>
+									</li>
+									<li class="select__item">
+										<span>30</span>
+									</li>
+								</ul>
+							</div>
+							<p class="item-cart__select-text">days</p>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="cart__footer">
+		<a href="#" class="cart__btn btn">
+			<p class="cart__btn-text">
+				Check Out
+			</p>
+			<div class="cart__btn-point"></div>
+			<p class="cart__btn-price">
+				$156.58
+			</p>
+		</a>
+	</div>
+</div>
+<div class="cart-wrapper"></div>
+
+
+		<article class="article">
+			<div class="container">
+				<div class="article__row">
+					<div class="article__block">
+						<h1 class="article__title">
+							Terms of Use
+						</h1>
+
+						<p class="article__text">
+							We provide Visitors (as defined below) with access to the Website, and Customers (as defined below)
+							with access to the Services subject to the following Terms of Use. By browsing the public areas or
+							by
+							accessing and using the Services, you acknowledge that you have read, understood, and agree to be
+							legally bound by these Terms of Use and our Privacy Policy, which is hereby incorporated by
+							reference
+							(collectively, this “Agreement”). If you do not agree to any of these terms, then please do not use
+							the Website and/or the Services. We may change the terms and conditions of these Terms of Use from
+							time to time, provided, however, if we make any material changes, we will notify you by email (sent
+							to
+							the email address specified in your account) prior to the changes becoming effective.
+						</p>
+					</div>
+					<div class="article__block">
+						<h2 class="article__subtitle">
+							1. No medical advice
+						</h2>
+
+						<p class="article__text">
+							You acknowledge and agree that Noho Health does not provide any form of medical care, medical
+							opinion, medical advice, diagnosis, or treatment, and that Noho Health does not evaluate the need
+							to seek medical attention, through the Website and the Services. The Website, the Services and the
+							Content are for informational purposes only, and are not intended as a substitute for professional
+							medical advice, diagnosis, or treatment. You should not use the information on the Website for
+							diagnosing or treating a health problem or disease, or prescribing any medication or other
+							treatment. Always seek the advice of your physician or other qualified health provider before
+							taking any medication or nutritional, herbal or homeopathic supplement and with any questions you
+							may have regarding a medical condition. Never disregard professional medical advice or delay in
+							seeking it because of something you have read on the Website, the Services and/or the Content. If
+							you think you may have a medical emergency, call your doctor or 911 immediately. Reliance on the
+							Website, the Services and the Content is solely at your own risk. Information provided on the
+							Website and the use of any products or services purchased from our Website by you DOES NOT create a
+							doctor-patient relationship between you and any of the health professionals affiliated with our
+							Website. Information and statements regarding dietary supplements have not been evaluated by the
+							Food and Drug Administration and are not intended to diagnose, treat, cure, or prevent any disease.
+						</p>
+					</div>
+					<div class="article__block">
+						<h2 class="article__subtitle">
+							2. Description and use of service
+						</h2>
+
+						<p class="article__text article__text_mb">
+							Through the Services, we help you to build your own pack of grab-and-go supplements and/or vitamins
+							(“Personalized Care/of Packs”) that we deliver to you in packaged boxes on a subscription basis
+							(“Subscription”).
+						</p>
+
+						<ul class="article__list">
+							<li class="article__item">
+								Citrus bioflavonoid complex
+							</li>
+							<li class="article__item">
+								Provides potent antioxidant protection and supports healthy immune system function*
+							</li>
+							<li class="article__item">
+								Supports healthy collagen production, the main component of connective tissue*
+							</li>
+							<li class="article__item">
+								This product is non-GMO, gluten free, and vegetarian
+							</li>
+						</ul>
+						<p class="article__text">
+							Visitors. Visitors, as the term implies, are people who do not register with us, but want to
+							explore the Website. No login is required for Visitors. Visitors can: (i) view all
+							publicly-available content on the Website; (ii) e-mail us, and (iii) chat with us via our website.
+						</p>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<footer class="footer">
+	<div class="container">
+		<div class="footer__row">
+			<div class="footer__logo">
+				<a href="#" class="footer__logo-link">
+					<img loading="lazy" src="img/icons/logo_footer.svg" alt="Logo" class="footer__logo-img">
+				</a>
+			</div>
+			<div class="footer__body">
+				<div class="footer__block footer__block_shop">
+					<h3 class="footer__title">
+						Shop
+					</h3>
+					<div class="footer__shop-list">
+						<ul class="footer__list footer__list_shop">
+							<li class="footer__item footer__item_shop">
+								<a href="#" class="footer__link">
+									Vitamins & Dietary Supplements
+								</a>
+							</li>
+							<li class="footer__item footer__item_shop">
+								<a href="#" class="footer__link">
+									Weight Loss
+								</a>
+							</li>
+							<li class="footer__item footer__item_shop">
+								<a href="#" class="footer__link">
+									Minerals
+								</a>
+							</li>
+							<li class="footer__item footer__item_shop">
+								<a href="#" class="footer__link">
+									Antioxidants
+								</a>
+							</li>
+						</ul>
+						<ul class="footer__list footer__list_shop">
+							<li class="footer__item footer__item_shop">
+								<a href="#" class="footer__link">
+									Probiotics
+								</a>
+							</li>
+							<li class="footer__item footer__item_shop">
+								<a href="#" class="footer__link">
+									Pain Relief
+								</a>
+							</li>
+							<li class="footer__item footer__item_shop">
+								<a href="#" class="footer__link">
+									Prenatal Vitamins
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__block">
+					<h3 class="footer__title">
+						Information
+					</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#" class="footer__link">
+								Terms & Conditions
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">
+								Privacy Policy
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">
+								Shipping & Delivery
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">
+								Subscription Cycle & Billing
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">
+								Return Policy
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h3 class="footer__title">
+						Contact
+					</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#" class="footer__link">
+								support@medstogo.com
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link _fb">
+								Facebook
+							</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link _insta">
+								Instagram
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<p class="footer__copy copy">
+				© 2020 Vitamins.com / All rights reserved
+			</p>
+		</div>
+	</div>
+</footer>
+	</div>
+	<script src="./js/app.min.js" type="module"></script>
+</body>
+
+</html>

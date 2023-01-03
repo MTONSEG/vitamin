@@ -11,7 +11,7 @@ if (iconBurger) {
 		toggleClass(body, '_lock');
 	})
 }
-
+// Подменю
 const catalogsMenu = document.querySelectorAll('.catalog');
 
 if (catalogsMenu) {
@@ -38,3 +38,22 @@ if (catalogsMenu) {
 	}
 }
 
+
+// Корзина
+const cartOpen = document.querySelector('.cart-link');
+const cartClose = document.querySelector('.cart__close');
+const cartWrapper = document.querySelector('.cart-wrapper');
+const cartBody = document.querySelector('.cart');
+
+if (cartOpen) {
+	cartOpen.addEventListener('click', e => {
+		addClass(cartBody, '_active');
+		addClass(cartWrapper, '_active');
+		addClass(body, '_lock');
+	})
+	cartClose.addEventListener('click', e => {
+		removeClass(cartBody, '_active');
+		removeClass(cartWrapper, '_active');
+		removeClass(body, '_lock');
+	})
+}

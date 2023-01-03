@@ -6,6 +6,9 @@
 		justify-content: space-between;
 		position: relative;
 	}
+	&__logo {
+		margin: 0 60px 0 0;
+	}
 	&__logo-img {
 		display: block;
 		width: 85.5px;
@@ -16,37 +19,52 @@
 		width: 100%;
 		max-width: 1039px;
 		display: flex;
+		justify-content: space-between;
 	}
 
 	&__block {
-		width: 25%;
+		width: 27%;
 		&_shop {
-			width: 50%;
+			width: 45.8%;
 		}
 	}
 
 	&__title {
 		font-size: 18px;
-		margin-bottom: 20px;
+		margin-bottom: 26px;
 	}
 
 	&__shop-list {
 		display: flex;
 	}
 
-	&__list {
-
-	}
-
 	&__item {
-		max-width: 180px;
-		margin-bottom: 10px;
+		max-width: 185px;
+		margin-bottom: 14px;
 	}
 	&__link {
 		line-height: 150%;
 		color: rgb(0, 0, 0, 0.5);
 		&:hover {
 			color: #000;
+		}
+		&._fb,
+		&._insta {
+			display: flex;
+			&::before {
+				margin: 0 10px 0 0;
+			}
+		}
+		&._fb {
+			&::before {
+				content: url('@img/icons/fb.svg');
+
+			}
+		}
+		&._insta {
+			&::before {
+				content: url('@img/icons/insta.svg');
+			}
 		}
 	}
 
@@ -58,5 +76,52 @@
 		font-size: 12px;
 		line-height: 16px;
 		color: rgba(0, 0, 0, 0.3);
+	}
+}
+
+@media (max-width: 991px) {
+	.footer {
+		padding: 40px 0 74px;
+		&__row {
+			flex-direction: column;
+		}
+		&__logo {
+			margin-bottom: 42px;
+		}
+		&__logo-img {
+			width: 42px;
+			height: 50px;
+		}
+		&__title {
+			margin-bottom: 20px;
+		}
+		&__copy {
+			position: static;
+			max-width: 100%;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer {
+		&__logo {
+
+		}
+		&__shop-list {
+			flex-direction: column;
+		}
+		&__body {
+			flex-wrap: wrap;
+		}
+		&__block {
+			width: 50%;
+			margin-bottom: 27px;
+			&_shop {
+				width: 50%;
+			}
+			&:last-child {
+				margin-bottom: 19px;
+			}
+		}
 	}
 }

@@ -87,6 +87,7 @@
 		width: 100%;
 		max-width: 900px;
 		right: -124px;
+		top: calc(30% - 37px);
 		z-index: 2;
 		margin: 97px 0 0 0;
 	}
@@ -207,7 +208,7 @@
 		height: 99px;
 	}
 	&__title {
-		margin-bottom: 31px;
+		margin-bottom: 30px;
 	}
 	&__text {
 		margin-bottom: 51px;

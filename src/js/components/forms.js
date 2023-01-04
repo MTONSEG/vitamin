@@ -1,51 +1,39 @@
 //Импортирую ф-ии добавления класса
-import { addClass, removeClass, toggleClass } from "../modules/functions.js";
+import { addClass, removeClass} from "../modules/functions.js";
 
 //Меню учетной записи
-const userMenu = document.querySelector('.user-menu');
+const profile = document.querySelector('.profile');
 
-if (userMenu) {
-	const itemMenu = userMenu.querySelectorAll('.user-menu__item');
-	const bodyMenu = userMenu.querySelectorAll('.user-menu__content');
-	const navbar = userMenu.querySelector('.user-menu__navbar');
-	const openBtn = userMenu.querySelector('.user-menu__open');
-	const closeBtn = userMenu.querySelector('.user-menu__close');
+if (profile) {
+	const itemLink = profile.querySelectorAll('.profile__link');
+	const itemBody = profile.querySelectorAll('.profile__content');
 	const body = document.querySelector('body');
 
-	itemMenu.forEach(elem => {
+	console.log(itemBody);
+
+	itemLink.forEach(elem => {
 		elem.addEventListener('click', e => {
-			let currentLink = e.target.closest('.user-menu__item');
+			let currentLink = e.target.closest('.profile__link');
 			let linkId = currentLink.getAttribute('data-link');
 			let currentBody = document.querySelector(linkId);
 			let activeItem = currentLink.querySelector('_active');
 
+			console.log(currentLink)
+
 			if (!activeItem) {
-				for (let item of itemMenu) {
+				for (let item of itemLink) {
 					removeClass(item, '_active');
 				}
 
-				for (let item of bodyMenu) {
+				for (let item of itemBody) {
 					removeClass(item, '_active');
 				}
 			}
 
 			addClass(currentLink, '_active');
 			addClass(currentBody, '_active');
-			removeClass(navbar, '_active');
 			removeClass(body, '_lock');
 		})
 	})
-
-	if (closeBtn) {
-		openBtn.addEventListener('click', e => {
-
-			addClass(navbar, '_active');
-			addClass(body, '_lock');
-		})
-		closeBtn.addEventListener('click', e => {
-			removeClass(navbar, '_active');
-			removeClass(body, '_lock');
-		})
-	}
 }
 

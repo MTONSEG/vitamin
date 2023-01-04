@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./html/head.html',{title: "Профиль"})
+
+<body>
+	<div class="wrapper">
+		@@include('./html/header.html',{})
+
+		<div class="profile">
+			<div class="container">
+				<div class="profile__row">
+					<nav class="profile__nav">
+						<a data-link="#subs" href="#" class="profile__link">Subscriptions</a>
+						<a data-link="#order" href="#" class="profile__link _active">Orders</a>
+						<a data-link="#overview" href="#" class="profile__link">Account Overview</a>
+						<a data-link="#payment" href="#" class="profile__link">Payment methods</a>
+						<a data-link="#password" href="#" class="profile__link">Change Password</a>
+						<a href="imdex.html" class="profile__link profile__link_red">Sign out</a>
+					</nav>
+					<div id="subs" class="profile__content">
+						<div class="profile__subs subs">
+							<h1 class="profile__title">Subscriptions</h1>
+
+							<ul class="subs__list">
+								<li class="subs__item item-subs">
+									<div class="item-subs__image-wrap item-subs__image-wrap_green">
+										<img loading="lazy" src="@img/profile_img-1.png" alt="Vitamin Bottle" class="item-subs__image">
+									</div>
+									<div class="item-subs__body">
+										<p class="item-subs__category category category_green">
+											Minerals
+										</p>
+										<div class="item-subs__head">
+											<h2 class="item-subs__title item-name">
+												2 х Standard Process Thymus PMG 90 Tablets
+											</h2>
+											<p class="item-subs__price price">
+												$84.00
+											</p>
+										</div>
+										<div class="item-subs__footer">
+											<div class="item-subs__delivery">
+												<p class="item-subs__periodicity">
+													Shipment every 60 days
+												</p>
+												<p class="item-subs__next">
+													Next delivery: 28th Apr 2020
+												</p>
+											</div>
+											<a href="#" class="item-subs__btn btn btn_quiz">Unsubscribe</a>
+										</div>
+									</div>
+								</li>
+								<li class="subs__item item-subs">
+									<div class="item-subs__image-wrap item-subs__image-wrap_pink">
+										<img loading="lazy" src="@img/profile_img-2.png" alt="Vitamin Bottle" class="item-subs__image">
+									</div>
+									<div class="item-subs__body">
+										<p class="item-subs__category category category_pink">
+											Prenatal Vitamins
+										</p>
+										<div class="item-subs__head">
+											<h2 class="item-subs__title item-name">
+												1 x Ortho Molecular Products Adrene Vive Capsules
+											</h2>
+											<p class="item-subs__price price">
+												$31.26
+											</p>
+										</div>
+										<div class="item-subs__footer">
+											<div class="item-subs__delivery">
+												<p class="item-subs__periodicity">
+													Shipment every 30 days
+												</p>
+												<p class="item-subs__next">
+													Next shipment: 19th Apr 2020
+												</p>
+											</div>
+											<a href="#" class="item-subs__btn btn btn_quiz">Unsubscribe</a>
+										</div>
+									</div>
+								</li>
+								<li class="subs__item item-subs">
+									<div class="item-subs__image-wrap item-subs__image-wrap_purple">
+										<img loading="lazy" src="@img/profile_img-3.png" alt="Vitamin Bottle" class="item-subs__image">
+									</div>
+									<div class="item-subs__body">
+										<p class="item-subs__category category category_purple">
+											Vitamins & Dietary Supplements
+										</p>
+										<div class="item-subs__head">
+											<h2 class="item-subs__title item-name">
+												3 x Metagenics - 500-C Methoxyflavone
+											</h2>
+											<p class="item-subs__price price">
+												$32.45
+											</p>
+										</div>
+										<div class="item-subs__footer">
+											<div class="item-subs__delivery">
+												<p class="item-subs__periodicity">
+													Shipment every 40 days
+												</p>
+												<p class="item-subs__next">
+													Next delivery: 15th Apr 2020
+												</p>
+											</div>
+											<a href="#" class="item-subs__btn btn btn_quiz">Unsubscribe</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="order" class="profile__content _active">
+						<div class="profile__order order">
+							<h1 class="profile__title">Orders</h1>
+
+							<ul class="order__list">
+								<li class="order__item item-order">
+									<div class="item-order__header">
+										<div class="item-order__header-top">
+											<p class="item-order__date">18 May 2020</p>
+											<p class="item-order__status">Shipping</p>
+										</div>
+										<h4 class="item-order__num-order">No 67824-6786</h4>
+										<img src="@img/icons/profile_arr.svg" alt="icon" class="item-order__icon">
+									</div>
+									<div class="item-order__content">
+										<ul class="item-order__list">
+											<li class="item-order__item">
+												<div class="item-subs__image-wrap item-subs__image-wrap_green">
+													<img src="@img/profile_img-1.png" alt="Vitamins Bottle" class="item-subs__image">
+												</div>
+												<div class="item-order__body">
+													<p class="item-order__category category category_green">
+														Minerals
+													</p>
+													<h3 class="item-order__title item-name">
+														2 х Standard Process Thymus PMG 90 Tablets
+													</h3>
+													<p class="item-order__price price">
+														$84.00
+													</p>
+												</div>
+											</li>
+											<li class="item-order__item">
+												<div class="item-subs__image-wrap item-subs__image-wrap_pink">
+													<img src="@img/profile_img-1.png" alt="Vitamins Bottle" class="item-subs__image">
+												</div>
+												<div class="item-order__body">
+													<p class="item-order__category category category_pink">
+														Prenatal Vitamins
+													</p>
+													<h3 class="item-order__title item-name">
+														1 x Ortho Molecular Products Adrene Vive Capsules
+													</h3>
+													<p class="item-order__price price">
+														$84.00
+													</p>
+												</div>
+											</li>
+											<li class="item-order__item">
+												<div class="item-subs__image-wrap item-subs__image-wrap_purple">
+													<img src="@img/profile_img-1.png" alt="Vitamins Bottle" class="item-subs__image">
+												</div>
+												<div class="item-order__body">
+													<p class="item-order__category category category_purple">
+														Vitamins & Dietary Supplements
+													</p>
+													<h3 class="item-order__title item-name">
+														2 х Standard Process Thymus PMG 90 Tablets
+													</h3>
+													<p class="item-order__price price">
+														$84.00
+													</p>
+												</div>
+											</li>
+										</ul>
+										<div class="item-order__footer">
+											<div class="item-order__amount">
+												<p class="item-order__amount-title">Order amount:</p>
+												<p class="item-order__amount-value">$180.90</p>
+											</div>
+											<a href="#" class="item-order__btn btn btn_quiz">Add to cart</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="overview" class="profile__content"></div>
+					<div id="payment" class="profile__content"></div>
+					<div id="password" class="profile__content"></div>
+				</div>
+			</div>
+		</div>
+
+		@@include('./html/footer.html',{})
+	</div>
+	<script src="./js/app.min.js" type="module"></script>
+	<!-- <script src="./js/forms.min.js" type="module"></script> -->
+</body>
+
+</html>

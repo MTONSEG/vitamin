@@ -54,7 +54,7 @@
 	}
 	&__content {
 		width: 100%;
-		max-width: 1039px;
+		max-width: 1041px;
 		display: none;
 		&._active {
 			display: block;
@@ -178,6 +178,10 @@
 
 .item-order {
 	padding: 40px;
+	margin-bottom: 18px;
+	&:last-child {
+		margin: 0;
+	}
 	&__date,
 	&__status,
 	&__amount-title {
@@ -201,8 +205,12 @@
 	}
 	&__icon {
 		display: none;
-		width: 9px;
-		height: 14.8px;
+	}
+	&__status {
+		margin: 0 2px 0 0;
+	}
+	&__content {
+		transition: 0.3s all;
 	}
 	&__list {
 		padding: 40px 0 50px;
@@ -218,7 +226,7 @@
 		display: flex;
 	}
 	&__body {
-		padding: 10px 0 11px;
+		padding: 12px 0 11px;
 		flex-direction: column;
 	}
 	&__category {
@@ -239,6 +247,10 @@
 			font-size: 20px;
 			line-height: 27px;
 		}
+	}
+	&__btn {
+		margin: 3px 2px 0 0;
+		height: 50px;
 	}
 }
 
@@ -308,5 +320,102 @@
 	.price {
 		font-size: 16px;
 		line-height: 22px;
+	}
+
+	.item-order {
+		padding: 30px 20px;
+		padding: 0;
+		margin-bottom: 13px;
+		position: relative;
+		& .item-subs {
+			&__image-wrap {
+				flex: 0 0 100px;
+				height: 120px;
+				margin: 0px 21px 0 0;
+			}
+		}
+		&__content {
+			max-height: 0;
+			overflow: hidden;
+		}
+		&__list {
+			padding: 0 20px 40px;
+			margin-bottom: 28px;
+			grid-template-columns: 1fr;
+			gap: 15px;
+
+		}
+		&__item {
+			align-items: center;
+		}
+		&__header {
+			position: relative;
+			padding: 30px 20px;
+		}
+		&__header-top {
+			justify-content: flex-start;
+		}
+		&__date,
+		&__status,
+		&__amount-title {
+			font-size: 14px;
+			line-height: 19px;
+			color: $black05;
+		}
+		&__date {
+			&::after {
+				content: "\2981";
+				margin: 0 8px;
+			}
+		}
+		&__num-order {
+			font-size: 20px;
+			line-height: 24px;
+		}
+		&__amount {
+			flex: 0 0 auto;
+			margin: 0 22px 0 0;
+		}
+		&__amount-title {
+			margin-bottom: 6px;
+		}
+		&__amount-value {
+			font-size: 16px;
+			line-height: 22px;
+		}
+		&__btn {
+			width: 100%;
+			max-width: 154px;
+			margin: -2px 0px 0 0;
+		}
+		&__icon {
+			display: block;
+			position: absolute;
+			top: 50px;
+			right: 24px;
+			transition: 0.3s all;
+			transform: rotate(180deg);
+			&._active {
+				transform: rotate(0);
+			}
+		}
+		&__body {
+			padding: 0;
+			display: block;
+		}
+		&__footer {
+			padding: 0 20px 30px;
+		}
+		&__title {
+			margin-bottom: 10px;
+		}
+		& .item-name {
+			font-size: 14px;
+			line-height: 17px;
+		}
+		& .price {
+			font-size: 14px;
+			line-height: 19px;
+		}
 	}
 }

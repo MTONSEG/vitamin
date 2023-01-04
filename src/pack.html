@@ -21,7 +21,10 @@
 				</div>
 			</div>
 			<img src="@img/pack_eclipse-1.svg" alt="Eclipse 1" class="pack__eclipse pack__eclipse_1">
-			<img src="@img/pack_eclipse-2.svg" alt="Eclipse 2" class="pack__eclipse pack__eclipse_2">
+			<picture>
+				<source media="(max-width: 991px)" srcset="@img/pack_eclipse-2_m.svg">
+				<img src="@img/pack_eclipse-2.svg" alt="Eclipse 2" class="pack__eclipse pack__eclipse_2">
+			</picture>
 		</section>
 
 		<section class="list-pack">
@@ -76,9 +79,11 @@
 									Ortho Molecular Products Orthomega 820
 								</h3>
 								<p class="item-pack__price">
-									$61.98
+									<span class="item-pack__price_old">$61.98</span>
+									<span class="item-pack__price_sale">$34.08</span>
 								</p>
 							</div>
+							<div class="item-pack__sale">-45%</div>
 						</li>
 						<li class="list-pack__item item-pack">
 							<div class="item-pack__image-wrap">

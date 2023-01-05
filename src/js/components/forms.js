@@ -29,6 +29,8 @@ if (profile) {
 			addClass(currentLink, '_active');
 			addClass(currentBody, '_active');
 			removeClass(body, '_lock');
+			
+			e.preventDefault();
 		})
 	})
 }
@@ -84,4 +86,24 @@ if (accordion) {
 			}
 		})
 	}
+}
+
+
+//Input File
+const inputFile = document.querySelector('.form__input-file');
+
+if (inputFile) {
+	const inputText = document.querySelector('.form__input-text');
+
+	inputFile.addEventListener('change', e => {
+		let files = inputFile.files;
+
+		console.log(files);
+
+		if (files.length > 1) {
+			inputText.innerHTML = `${files.length} files`;
+		} else {
+			inputText.innerHTML = files[0].name;
+		}
+	})
 }

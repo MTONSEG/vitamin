@@ -65,6 +65,20 @@
 		line-height: 43px;
 		margin-bottom: 40px;
 	}
+	&__subtitle {
+		font-size: 22px;
+		line-height: 27px;
+		margin: 14px 0 0;
+	}
+	&__content-head {
+		max-width: 922px;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 43px;
+		& .profile__title {
+			margin: 0;
+		}
+	}
 }
 
 .item-subs,
@@ -254,6 +268,204 @@
 	}
 }
 
+.form {
+	max-width: 920px;
+	&_pass {
+		max-width: 444px;
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+		gap: 31px 32px;
+		margin-bottom: 41px;
+	}
+	&__select-wrap{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 32px;
+	}
+	&__input-wrap {
+		display: flex;
+		flex-direction: column-reverse;
+		width: 100%;
+	}
+	&__select-wrap .select__current,
+	&__input {
+		color: #000;
+		line-height: 25px;
+		font-size: 18px;
+	}
+	&__select-wrap .select__header,
+	&__input {
+		padding: 15px 26px 16px;
+		background: #FAF8F6;
+		transition: all 0.3s;
+		&:hover {
+			box-shadow: 0 0 5px #f3e2d1;
+		}
+	}
+
+	&__select-wrap {
+		& .select {
+			&__header {
+				height: auto;
+				width: 100%;
+				border-radius: 12px;
+				justify-content: space-between;
+			}
+			&__current {
+				font-weight: 400;
+				text-transform: uppercase;
+				margin: 0;
+			}
+			&__body {
+				border-radius: 12px;
+				overflow: hidden;
+			}
+			&__item {
+				font-size: 18px;
+				font-weight: 400;
+				border-bottom: 1px solid $black007;
+			}
+			&__icon {
+				margin: 5px -4px 0 0px;
+			}
+			&._active {
+				& .select__header {
+					box-shadow: 0 0 5px #f3e2d1;
+				}
+			}
+			&._active + p {
+				color: #000;
+			}
+		}
+		& .form__input-wrap {
+			max-width: 206px;
+			min-width: 120px;
+		}
+	}
+
+	&__input-title {
+		line-height: 19px;
+		color: $black05;
+		margin: 0 0 5px 3px;
+		transition: all 0.3s;
+	}
+	&__input {
+		display: block;
+		border-radius: 12px;
+		border: 2px slid transparent;
+		position: relative;
+		&::placeholder {
+			color: #000;
+			font-size: 18px;
+			line-height: 25px;
+		}
+		&:focus {
+			background-color: #fff;
+			box-shadow: 0 0 5px #f3e2d1;
+		}
+		&:focus + p {
+			color: #000;
+		}
+		&_no-hover {
+			&:hover {
+				box-shadow: none;
+			}
+		}
+	}
+
+	&__input-file {
+		position: relative;
+		z-index: -1;
+		opacity: 0;
+	}
+
+	&__file-btn {
+		position: absolute;
+		top: 50%;
+		right: 8px;
+		transform: translateY(-50%);
+		color: #fff;
+		background: #FF7D4E;
+		border-radius: 12px;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 16px;
+		padding: 9px 30px 10px;
+		cursor: pointer;
+		transition: all 0.3s;
+		&:hover {
+			box-shadow: 0 0 5px #FF7D4E;
+		}
+	}	
+}
+
+.payment {
+	position: relative;
+	&__card {
+		width: 491px;
+		height: 288px;
+		background: #F3EFEA;
+		border-radius: 16px;
+		padding: 51px 40px 40px;
+		&_front {
+			position: relative;
+			z-index: 2;
+			margin-bottom: 88px;
+			& .form__input-wrap:last-child {
+				width: 106px;
+			}
+		}
+		&_back {
+			background: #ECE8E2;
+			position: absolute;
+			z-index: 1;
+			top: 133px;
+			left: 186px;
+			display: flex;
+			justify-content: flex-end;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 40px;
+				left: 0;
+				width: 100%;
+				height: 63px;
+				background: #C2BFBB;
+			}
+			& .form__input-wrap {
+				width: 104px;
+				margin: 0 0 10px;
+			}
+		}
+		& .form {
+			&__input {
+				background: #fff;
+				&:hover {
+					box-shadow: none;
+				}
+			}
+			&__input-title {
+				margin-bottom: 10px;
+			}
+		} 
+	}
+	&__icons {
+		display: flex;
+		justify-content: flex-end;
+		margin: 9px -2px -3px 0px;
+		img {
+			display: block;
+			width: 239px;
+			height: 23px;
+		}
+	}
+	& .form {
+		display: none;
+	}
+}
+
 @media ($width991) {
 	.profile {
 		padding: 120px 0 60px;
@@ -268,6 +480,15 @@
 		&__title {
 			font-size: 24px;
 			line-height: 29px;
+			margin-bottom: 30px;
+		}
+		&__subtitle {
+			font-size: 18px;
+			line-height: 22px;
+			margin: 10px 0 0;
+		}
+		&__content-head {
+			flex-direction: column;
 			margin-bottom: 30px;
 		}
 	}
@@ -416,6 +637,58 @@
 		& .price {
 			font-size: 14px;
 			line-height: 19px;
+		}
+	}
+
+	.form {
+		&_pass {
+			max-width: 100%;
+		}
+		&__list {
+			grid-template-columns: 100%;
+			gap: 26px;
+			margin-bottom: 35px;
+		}
+		&__input-title {
+			margin: 0 0 5px 1px;
+		}
+		&__input,
+		& .select__header {
+			padding: 15px 24px 16px;
+		}
+		&__select-wrap {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 15px;
+			& .form__input-wrap {
+				flex: 1 1 auto;
+				max-width: 100%;
+			}
+			& .select__icon {
+				margin: 1px 0px 0 0px;
+			}
+		}
+		&__btn {
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	.payment {
+		&__card {
+			display: none;
+			pointer-events: none;
+			visibility: hidden;
+		}
+		& .form {
+			display: block;
+		}
+	}
+}
+@media ($width575) {
+	.form {
+		&__select-wrap .select__icon {
+			display: block;
 		}
 	}
 }

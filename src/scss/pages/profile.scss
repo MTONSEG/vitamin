@@ -288,6 +288,7 @@
 		display: flex;
 		flex-direction: column-reverse;
 		width: 100%;
+
 	}
 	&__select-wrap .select__current,
 	&__input {
@@ -340,7 +341,6 @@
 			}
 		}
 		& .form__input-wrap {
-			max-width: 206px;
 			min-width: 120px;
 		}
 	}
@@ -372,6 +372,9 @@
 			&:hover {
 				box-shadow: none;
 			}
+		}
+		&_billing::placeholder {
+			color: $black05;
 		}
 	}
 
@@ -481,6 +484,10 @@
 			font-size: 24px;
 			line-height: 29px;
 			margin-bottom: 30px;
+			&_checkout {
+				font-size: 20px;
+				line-height: 24px;
+			}
 		}
 		&__subtitle {
 			font-size: 18px;

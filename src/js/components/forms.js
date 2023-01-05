@@ -29,32 +29,11 @@ if (profile) {
 			addClass(currentLink, '_active');
 			addClass(currentBody, '_active');
 			removeClass(body, '_lock');
-			
+
 			e.preventDefault();
 		})
 	})
 }
-
-// const accordion = document.querySelectorAll('.item-order');
-
-// if (accordion) {
-// 	for (let elem of accordion) {
-// 		let accordionBtn = elem.querySelector('.accordion-header');
-// 		let accordionBody = elem.querySelector('.accordion-body');
-// 		let bodyHeight = accordionBody.scrollHeight + 'px';
-
-// 		accordionBtn.addEventListener('click', e => {
-
-// 			if (accordionBody.style.maxHeight) {
-// 				accordionBody.style.maxHeight = 0;
-// 			} else {
-// 				accordionBody.style.maxHeight = 0;
-// 				accordionBody.style.maxHeight = bodyHeight;
-// 			}
-
-// 		})
-// 	}
-// }
 
 
 // Аккордеон
@@ -67,8 +46,11 @@ if (accordion) {
 	for (let elem of headersAccordion) {
 		elem.addEventListener('click', () => {
 
+			console.log(elem)
 			let content = elem.nextElementSibling;
 			let icon = elem.querySelector('.item-order__icon');
+
+			console.log(content.scrollHeight);
 
 			if (content.style.maxHeight) {
 				for (let elem of bodiesAccordion) {
@@ -104,6 +86,25 @@ if (inputFile) {
 			inputText.innerHTML = `${files.length} files`;
 		} else {
 			inputText.innerHTML = files[0].name;
+		}
+	})
+}
+
+// Оформление заказа, аккордеон
+const totalHeader = document.querySelector('.total__header');
+const totalBody = document.querySelector('.total__body');
+
+if (totalHeader) {
+	totalHeader.addEventListener('click', e => {
+		let scrollHeightBody = totalBody.scrollHeight;
+		let iconArrow = totalHeader.querySelector('.item-order__icon');
+
+		if (totalBody.style.maxHeight) {
+			totalBody.style.maxHeight = null;
+			removeClass(iconArrow, '_active');
+		} else {
+			totalBody.style.maxHeight = scrollHeightBody + 'px';
+			addClass(iconArrow, '_active');
 		}
 	})
 }

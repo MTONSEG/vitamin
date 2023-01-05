@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./html/head.html',{title: "Checkout"})
+
+<body>
+	<div class="wrapper">
+		<section class="checkout">
+			<header class="checkout__header">
+				<div class="container">
+					<div class="checkout__header-row">
+						<img src="@img/icons/logo.svg" alt="Logo" class="checkout__logo">
+					</div>
+				</div>
+			</header>
+			<form action="#" class="checkout__body">
+				<div class="container container_checkout">
+					<div class="checkout__row">
+						<div class="checkout__forms">
+							<h1 class="profile__title profile__title_checkout">Delivery Information</h1>
+
+							<div class="form">
+								<div class="form__list mb80">
+									<div class="form__input-wrap">
+										<input class="form__input" type="text" name="First Name" tabindex="1" placeholder="John">
+										<p class="form__input-title">First Name</p>
+									</div>
+									<div class="form__input-wrap">
+										<input class="form__input" type="text" name="Last Name" tabindex="2" placeholder="Smith">
+										<p class="form__input-title">Last Name</p>
+									</div>
+									<div class="form__input-wrap">
+										<input class="form__input" type="text" name="Address Line 1" tabindex="3"
+											placeholder="Hilton st. 123">
+										<p class="form__input-title">Address Line 1</p>
+									</div>
+									<div class="form__input-wrap">
+										<input class="form__input" type="text" name="Address Line 2" tabindex="4">
+										<p class="form__input-title">Address Line 2</p>
+									</div>
+									<div class="form__input-wrap">
+										<input class="form__input" type="text" name="City" tabindex="5" placeholder="New York">
+										<p class="form__input-title">City</p>
+									</div>
+									<div class="form__select-wrap">
+										<div class="form__input-wrap">
+											<div class="select">
+												<div class="select__header" tabindex="6">
+													<div class="select__current">ny</div>
+													<img src="@img/icons/select-form.svg" alt="icon" class="select__icon">
+												</div>
+												<ul class="select__body">
+													<li class="select__item">NY</li>
+													<li class="select__item">AK</li>
+													<li class="select__item">FL</li>
+												</ul>
+											</div>
+											<p class="form__input-title">State / Province</p>
+										</div>
+										<div class="form__input-wrap">
+											<input class="form__input" type="text" name="ZIP / Postal Code" tabindex="7"
+												placeholder="213 822">
+											<p class="form__input-title">ZIP / Postal Code</p>
+										</div>
+									</div>
+									<div class="form__input-wrap">
+										<input class="form__input" type="email" name="Email" tabindex="7"
+											placeholder="johnsmith@gmail.com">
+										<p class="form__input-title">Email</p>
+									</div>
+									<div class="form__input-wrap">
+										<input class="form__input" type="number" name="Phone Number" tabindex="8"
+											placeholder="8 029 876 56 21">
+										<p class="form__input-title">Phone Number</p>
+									</div>
+								</div>
+							</div>
+
+							<h2 class="profile__title profile__title_checkout">Biling</h2>
+
+							<div class="form__list mb80">
+								<div class="form__input-wrap">
+									<input class="form__input form__input_billing" type="number" name="Card Number" tabindex="9"
+										placeholder="XXXX XXXX XXXX XXXX">
+									<p class="form__input-title">Card Number</p>
+								</div>
+								<div class="form__select-wrap">
+									<div class="form__input-wrap">
+										<input class="form__input form__input_billing" type="number" name="Expiration"
+											tabindex="10" placeholder="MM/YY">
+										<p class="form__input-title">Expiration</p>
+									</div>
+									<div class="form__input-wrap">
+										<input class="form__input form__input_billing" type="number" name="CVC" tabindex="11"
+											placeholder="CVC">
+										<p class="form__input-title">CVC</p>
+									</div>
+								</div>
+							</div>
+							<div class="checkout__btn-wrap-mobile"></div>
+							<footer class="checkout__footer">
+								<div class="checkout__links">
+									<a href="#" class="checkout__link">Return Policy</a>
+									<a href="#" class="checkout__link">Privacy Policy</a>
+									<a href="#" class="checkout__link">Terms & Conditions</a>
+								</div>
+								<img src="@img/checkout__icons.png" alt="Payment Systems" class="checkout__icon">
+							</footer>
+						</div>
+
+						<div class="checkout__total total">
+							<div class="total__header">
+								<div class="total__left-header">
+									<img src="@img/icons/cart.svg" alt="Cart" class="total__cart-icon">
+									<h3 class="total__title-header">Today’s total</h3>
+									<img src="@img/icons/profile_arr.svg" alt="arrow" class="item-order__icon">
+								</div>
+								<p class="total__price-header">$129.66</p>
+							</div>
+							<div class="total__body">
+								<ul class="total__list">
+									<li class="total__item">
+										<div class="total__image-wrap total__image-wrap_pink">
+											<img src="@img/total-img-1.png" alt="Item image" class="total__image">
+										</div>
+										<h3 class="total__name">
+											1 x Ortho Molecular Products 5-HTP Capsules
+										</h3>
+										<div class="total__item-price">
+											<p class="total__price-now">$61.98</p>
+										</div>
+									</li>
+									<li class="total__item">
+										<div class="total__image-wrap total__image-wrap_purple">
+											<img src="@img/total-img-2.png" alt="Item image" class="total__image">
+										</div>
+										<h3 class="total__name">
+											3 x Standard Process Thymus PMG 90 Tablets
+										</h3>
+										<div class="total__item-price">
+											<p class="total__price-old">$125.00</p>
+											<p class="total__price-now _sale">$61.98</p>
+										</div>
+									</li>
+									<li class="total__item">
+										<div class="total__image-wrap total__image-wrap_green">
+											<img src="@img/total-img-3.png" alt="Item image" class="total__image">
+										</div>
+										<h3 class="total__name">
+											1 x Ortho Molecular Products 5-HTP Capsules
+										</h3>
+										<div class="total__item-price">
+											<p class="total__price-old">$125.00</p>
+											<p class="total__price-now _sale">$61.98</p>
+										</div>
+									</li>
+								</ul>
+								<div class="total__footer">
+									<div class="total__price-block">
+										<p class="total__price-title">Subtotal</p>
+										<p class="total__value">$120.46</p>
+									</div>
+									<div class="total__price-block">
+										<p class="total__price-title">Discount</p>
+										<p class="total__value _sale">-$31.20</p>
+									</div>
+									<div class="total__price-block">
+										<p class="total__price-title">Shipping</p>
+										<p class="total__value">$9.20</p>
+									</div>
+									<div class="total__price-full">
+										<p class="total__full-title">Today’s Total:</p>
+										<p class="total__full-value">$129.66</p>
+									</div>
+								</div>
+								<button data-da=".checkout__btn-wrap-mobile,767,3" type="submit" class="total__btn btn">Place order</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</section>
+	</div>
+	<script src="./js/app.min.js" type="module"></script>
+	<script src="./js/forms.min.js" type="module"></script>
+</body>
+
+</html>

@@ -120,8 +120,6 @@
 .select__icon {
   display: block;
   transition: 0.3s;
-  width: 10px;
-  aspect-ratio: 10/6.25;
 }
 .select__body {
   right: 0;
@@ -338,6 +336,9 @@ body._lock {
   line-height: 19px;
   width: 154px;
 }
+.btn._disable {
+  background: #C4BDB6;
+}
 .btn:hover {
   box-shadow: 0 0 10px #808080;
 }
@@ -430,6 +431,33 @@ body._lock {
   line-height: 24px;
 }
 
+.success {
+  padding: 50px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.success__image-wrap {
+  margin-bottom: 80px;
+}
+.success__image {
+  width: 168px;
+  height: 200px;
+}
+.success__btn {
+  margin-bottom: 50px;
+}
+.success__footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  max-width: 508px;
+  padding: 40px 0 0;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width: 991px) {
   .container_list-pack {
     padding: 0;
@@ -488,6 +516,19 @@ body._lock {
     font-size: 16px;
     line-height: 19px;
     padding: 17px 15px 21px;
+  }
+  .success__image-wrap {
+    margin-bottom: 30px;
+  }
+  .success__image {
+    width: 84px;
+    height: 100px;
+  }
+  .success__btn {
+    margin-bottom: 40px;
+  }
+  .success__footer {
+    padding: 26px 0 0;
   }
 }
 @media (max-width: 375px) {
@@ -2202,6 +2243,20 @@ body._lock {
   line-height: 43px;
   margin-bottom: 40px;
 }
+.profile__subtitle {
+  font-size: 22px;
+  line-height: 27px;
+  margin: 14px 0 0;
+}
+.profile__content-head {
+  max-width: 922px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 43px;
+}
+.profile__content-head .profile__title {
+  margin: 0;
+}
 
 .item-subs,
 .item-order {
@@ -2386,6 +2441,188 @@ body._lock {
   height: 50px;
 }
 
+.form {
+  max-width: 920px;
+}
+.form_pass {
+  max-width: 444px;
+}
+.form__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  gap: 31px 32px;
+  margin-bottom: 41px;
+}
+.form__select-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.form__input-wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+.form__select-wrap .select__current, .form__input {
+  color: #000;
+  line-height: 25px;
+  font-size: 18px;
+}
+.form__select-wrap .select__header, .form__input {
+  padding: 15px 26px 16px;
+  background: #FAF8F6;
+  transition: all 0.3s;
+}
+.form__select-wrap .select__header:hover, .form__input:hover {
+  box-shadow: 0 0 5px #f3e2d1;
+}
+.form__select-wrap .select__header {
+  height: auto;
+  width: 100%;
+  border-radius: 12px;
+  justify-content: space-between;
+}
+.form__select-wrap .select__current {
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+.form__select-wrap .select__body {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.form__select-wrap .select__item {
+  font-size: 18px;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+.form__select-wrap .select__icon {
+  margin: 5px -4px 0 0px;
+}
+.form__select-wrap .select._active .select__header {
+  box-shadow: 0 0 5px #f3e2d1;
+}
+.form__select-wrap .select._active + p {
+  color: #000;
+}
+.form__select-wrap .form__input-wrap {
+  max-width: 206px;
+  min-width: 120px;
+}
+.form__input-title {
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 0 5px 3px;
+  transition: all 0.3s;
+}
+.form__input {
+  display: block;
+  border-radius: 12px;
+  border: 2px slid transparent;
+  position: relative;
+}
+.form__input::placeholder {
+  color: #000;
+  font-size: 18px;
+  line-height: 25px;
+}
+.form__input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 5px #f3e2d1;
+}
+.form__input:focus + p {
+  color: #000;
+}
+.form__input_no-hover:hover {
+  box-shadow: none;
+}
+.form__input-file {
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+}
+.form__file-btn {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  color: #fff;
+  background: #FF7D4E;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 9px 30px 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form__file-btn:hover {
+  box-shadow: 0 0 5px #FF7D4E;
+}
+
+.payment {
+  position: relative;
+}
+.payment__card {
+  width: 491px;
+  height: 288px;
+  background: #F3EFEA;
+  border-radius: 16px;
+  padding: 51px 40px 40px;
+}
+.payment__card_front {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 88px;
+}
+.payment__card_front .form__input-wrap:last-child {
+  width: 106px;
+}
+.payment__card_back {
+  background: #ECE8E2;
+  position: absolute;
+  z-index: 1;
+  top: 133px;
+  left: 186px;
+  display: flex;
+  justify-content: flex-end;
+}
+.payment__card_back::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 63px;
+  background: #C2BFBB;
+}
+.payment__card_back .form__input-wrap {
+  width: 104px;
+  margin: 0 0 10px;
+}
+.payment__card .form__input {
+  background: #fff;
+}
+.payment__card .form__input:hover {
+  box-shadow: none;
+}
+.payment__card .form__input-title {
+  margin-bottom: 10px;
+}
+.payment__icons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 9px -2px -3px 0px;
+}
+.payment__icons img {
+  display: block;
+  width: 239px;
+  height: 23px;
+}
+.payment .form {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .profile {
     padding: 120px 0 60px;
@@ -2398,6 +2635,15 @@ body._lock {
   .profile__title {
     font-size: 24px;
     line-height: 29px;
+    margin-bottom: 30px;
+  }
+  .profile__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 10px 0 0;
+  }
+  .profile__content-head {
+    flex-direction: column;
     margin-bottom: 30px;
   }
   .item-subs {
@@ -2536,6 +2782,49 @@ body._lock {
   .item-order .price {
     font-size: 14px;
     line-height: 19px;
+  }
+  .form_pass {
+    max-width: 100%;
+  }
+  .form__list {
+    grid-template-columns: 100%;
+    gap: 26px;
+    margin-bottom: 35px;
+  }
+  .form__input-title {
+    margin: 0 0 5px 1px;
+  }
+  .form__input, .form .select__header {
+    padding: 15px 24px 16px;
+  }
+  .form__select-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .form__select-wrap .form__input-wrap {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+  .form__select-wrap .select__icon {
+    margin: 1px 0px 0 0px;
+  }
+  .form__btn {
+    width: 100%;
+    margin: 0;
+  }
+  .payment__card {
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
+  .payment .form {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  .form__select-wrap .select__icon {
+    display: block;
   }
 }
 .footer {

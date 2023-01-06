@@ -270,6 +270,10 @@
 		border-bottom: 2px solid #EDEDED;
 		background: #fff;
 		z-index: 4;
+		&_product {
+			background: transparent;
+			border: 0;
+		}
 		&__row {
 			height: 70px;
 			justify-content: flex-end;

@@ -1,6 +1,8 @@
 // Форма колличества товаров
 const quantityBody = document.querySelectorAll('.quantity');
 
+console.log(quantityBody)
+
 if (quantityBody) {
 	for (let elem of quantityBody) {
 		let input = elem.querySelector('.quantity__input');

@@ -108,3 +108,15 @@ if (totalHeader) {
 		}
 	})
 }
+
+//Изменение текста Autoship в карточке товара
+
+const autoshipText = document.querySelector('.body-product__autoship p');
+
+if (autoshipText) {
+	let displayWidth = window.innerWidth;
+
+	if (displayWidth < 992) {
+		autoshipText.innerHTML = 'Deliver every';
+	}
+}

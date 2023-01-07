@@ -77,6 +77,9 @@
 	position: relative;
 	cursor: pointer;
 	transition: all .3s;
+	&_bg {
+		background: #FAF8F6;
+	}
 	&:hover {
 		transform: scale(1.05);
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);

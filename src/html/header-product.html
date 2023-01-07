@@ -4,7 +4,7 @@
 			<div class="header__burger burger">
 				<span class="burger__icon"></span>
 			</div>
-
+			
 			<a href="index.html" class="header__logo">
 				<img loading="lazy" src="@img/icons/logo-white.svg" alt="Logo" class="header__logo-icon">
 			</a>
@@ -13,7 +13,10 @@
 					<img loading="lazy" src="@img/icons/profile.svg" alt="profile" class="header__icon">
 				</a>
 				<a href="#" class="header__link _cart cart-link">
-					<img loading="lazy" src="@img/icons/cart.svg" alt="cart" class="header__icon">
+					<picture>
+						<source media="(max-width: 991px)" srcset="@img/icons/cart-white.svg">
+						<img loading="lazy" src="@img/icons/cart.svg" alt="cart" class="header__icon">
+					</picture>
 					<span></span>
 				</a>
 				<a href="#" class="header__btn btn btn_quiz">Take the quiz</a>

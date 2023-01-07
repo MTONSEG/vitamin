@@ -479,6 +479,26 @@
 			line-height: 19px;
 		}
 	}
+
+	.header_product {
+		position: absolute;
+		& .burger {
+			position: absolute;
+			&__icon,
+			&__icon::before,
+			&__icon::after {
+				background: #fff;
+			}
+			&._active .burger__icon,
+			&._active .burger__icon::before,
+			&._active .burger__icon::after{
+				background: #000;
+			}
+		}
+		& ._cart span {
+			border-color: #9C91E0;
+		}
+	}
 }
 
 @media (max-width: 575px) {

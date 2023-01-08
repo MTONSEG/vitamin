@@ -5,7 +5,7 @@
 	justify-content: space-between;
 	background: #FAF8F6;
 	padding: 30px 0 40px;
-	gap: 40px;
+	gap: 30px;
 	&__logo {
 		width: 42px;
 		height: 50px;
@@ -36,6 +36,7 @@
 	max-width: 920px;
 	background: #fff;
 	padding: 60px 20px;
+	margin: 0 0 11px;
 	&__container {
 		margin: 0 auto;
 		max-width: 682px;
@@ -69,7 +70,10 @@
 		margin: 0 auto;
 	}
 	&__input-wrap {
-		margin-bottom: 20px;
+		margin-bottom: 13px;
+		p {
+			color: $black03;
+		}
 	}
 	&__input {
 		&::placeholder {
@@ -77,6 +81,7 @@
 		}
 	}
 	&__btn {
+		font-family: 'Effra';
 		display: block;
 		width: 100%;
 		max-width: 270px;
@@ -92,6 +97,7 @@
 		transition: .2s;
 		&_create {
 			max-width: 100%;
+			margin: 20px 0 0px;
 		}
 		&:hover {
 			box-shadow: 0 0 5px $black05;
@@ -106,7 +112,7 @@
 		position: relative;
 		margin-bottom: 60px;
 		&-btn {
-			padding: 33px 10px 32px;
+			padding: 33px 20px 32px;
 			font-family: 'Effra';
 			font-weight: 500;
 			background:transparent;
@@ -129,9 +135,9 @@
 	&__tab-indicator {
 		position: absolute;
 		top: 50%;
-		left: 12px;
+		left: 0;
 		transform: translateY(-50%);
-		width: 323px;
+		width: 50%;
 		height: 65px;
 		background: #FF7D4E;
 		border-radius: 12px;
@@ -144,7 +150,7 @@
 	&__social-wrap {
 		justify-content: space-between;
 		gap: 10px;
-		margin-bottom: 65px;
+		margin-bottom: 40px;
 	}
 	&__social-btn {
 		width: 100%;
@@ -157,8 +163,16 @@
 		text-align: center;
 		background: #FAF8F6;
 		border-radius: 12px;
+		cursor: pointer;
+		outline: 2px solid transparent;
+		transition: .3s;
 		p {
 			width: 100%;
+		}
+		&:hover {
+			box-shadow: 0 0 10px #FF7D4E;
+			outline-color: #FF7D4E;
+			background: #fff;
 		}
 	}
 	&__social-icon {
@@ -197,18 +211,35 @@
 				font-size: 20px;
 				line-height: 24px;
 			}
+			& .submenu__back {
+				top: 22px;
+				left: 25px;
+			}
 		}
 		&__footer {
 			font-size: 14px;
 			line-height: 19px;
+			&_sign {
+				padding: 40px 20px 0;
+				width: 100%;
+				border-top: 1px solid $black007;
+			}
 		}
 	}
 
 	.form-login {
-		padding: 50px 20px 20px;
+		padding: 50px 20px 40px;
+		margin: 0;
 		&__title {
 			font-size: 24px;
 			line-height: 29px;
+			&_mb {
+				margin-bottom: 29px;
+			}
+		}
+		&__subtitle {
+			font-size: 16px;
+			line-height: 19px;
 		}
 		&__text {
 			font-size: 14px;
@@ -219,6 +250,36 @@
 			font-size: 16px;
 			line-height: 19px;
 			padding: 18px 20px;
+		}
+		&__tab {
+			margin-bottom: 39px;
+		}
+		&__tab-btn {
+			padding: 24px 25px;
+			font-size: 16px;
+			line-height: 19px;
+		}
+		&__tab-indicator-wrap {
+			width: calc(100% - 18px);
+		}
+		&__social-wrap {
+			flex-direction: column;
+			gap: 12px;
+		}
+		&__social-btn {
+			padding: 18px 16px;
+			max-width: 100%;
+			font-size: 16px;
+			line-height: 19px;
+			position: relative;
+		}
+		&__social-icon {
+			position: absolute;
+			top: 12px;
+			left: 16px;
+		}
+		&__input-wrap {
+			margin-bottom: 8px;
 		}
 	}
 }

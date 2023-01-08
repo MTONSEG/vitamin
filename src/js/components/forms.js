@@ -45,11 +45,8 @@ if (accordion) {
 	for (let elem of headersAccordion) {
 		elem.addEventListener('click', () => {
 
-			console.log(elem)
 			let content = elem.nextElementSibling;
 			let icon = elem.querySelector('.item-order__icon');
-
-			console.log(content.scrollHeight);
 
 			if (content.style.maxHeight) {
 				for (let elem of bodiesAccordion) {
@@ -67,25 +64,6 @@ if (accordion) {
 			}
 		})
 	}
-}
-
-//Input File
-const inputFile = document.querySelector('.form__input-file');
-
-if (inputFile) {
-	const inputText = document.querySelector('.form__input-text');
-
-	inputFile.addEventListener('change', e => {
-		let files = inputFile.files;
-
-		console.log(files);
-
-		if (files.length > 1) {
-			inputText.innerHTML = `${files.length} files`;
-		} else {
-			inputText.innerHTML = files[0].name;
-		}
-	})
 }
 
 // Оформление заказа, аккордеон
@@ -120,10 +98,10 @@ if (showCategories) {
 	})
 	
 	document.addEventListener('click', e => {
-		let whithinTarget = e.target.closest('.show');
+		let withinTarget = e.target.closest('.show');
 		let linkTarget = e.target.closest('.show-link');
 
-		if (!whithinTarget || linkTarget) {
+		if (!withinTarget || linkTarget) {
 			removeClass(showBtn, '_active');
 			removeClass(showBody, '_active');
 		} 

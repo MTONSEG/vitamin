@@ -3,7 +3,7 @@ import { stream as critical } from "critical";
 
 
 export const criticalStyles = () => {
-	return app.gulp.src('docs/cart.html')
+	return app.gulp.src('docs/product.html')
 		.pipe(
 			critical({
 				base: 'docs/',

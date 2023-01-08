@@ -45,14 +45,12 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, jsSwipe
 // Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
-const buildC = gulp.series(reset, mainTasks, criticalStyles);
 const deployFTP = gulp.series(reset, mainTasks, ftp);
 const criticalAPI = criticalStyles;
 
 // Экспорт сценариев
 export { dev }
 export { build }
-export { buildC }
 export { deployFTP }
 export { criticalAPI }
 

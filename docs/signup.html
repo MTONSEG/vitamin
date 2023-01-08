@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/icons/favicon-32.png" type="image/png">
+	<link type="image/png" sizes="16x16" rel="icon" href="./img/favicon.png">
+	<link media="all" rel="stylesheet" type="text/css" href="./css/style.min.css">
+	<title>Sign Up</title>
+</head>
+
+<body>
+	<section class="login">
+		<img src="img/icons/logo.svg" alt="logo" class="login__logo">
+
+		<div class="login__header">
+			<a href="#" class="submenu__back">
+				<img loading="lazy" src="img/icons/menu-back.svg" alt="back" class="submenu__back-icon">
+			</a>
+			<h1 class="login__header-title">Account</h1>
+		</div>
+
+		<form action="#" class="login__form form-login">
+			<div class="form-login__container">
+				<div class="form-login__tab">
+					<button data-tab="#regular" class="form-login__tab-btn tab-btn">Regular customer</button>
+					<button data-tab="#wholesale" class="form-login__tab-btn tab-btn _active">Wholesale customer</button>
+					<div class="form-login__tab-indicator-wrap">
+						<span class="form-login__tab-indicator tab-indicator"></span>
+					</div>
+				</div>
+
+				<h2 class="form-login__title form-login__title_mb">
+					Sign up with
+				</h2>
+
+				<div class="form-login__social-wrap">
+					<button class="form-login__social-btn">
+						<img src="img/icons/google.svg" alt="Google Sign Up" class="form-login__social-icon">
+						<p>Google</p>
+					</button>
+					<button class="form-login__social-btn">
+						<img src="img/icons/apple.svg" alt="Apple Sign Up" class="form-login__social-icon">
+						<p>Apple</p>
+					</button>
+					<button class="form-login__social-btn">
+						<img src="img/icons/facebook.svg" alt="Facebook Sign Up" class="form-login__social-icon">
+						<p>Facebook</p>
+					</button>
+				</div>
+
+				<h2 class="form-login__subtitle">
+					or sign up using your email address...
+				</h2>
+
+				<div id="regular" class="form-login__input-container tab-content">
+					<div class="form-login__input-wrap form__input-wrap">
+						<input class="form-login__input form__input" type="email" name="Email" tabindex="1"
+							placeholder="Email">
+					</div>
+					<div class="form-login__input-wrap form__input-wrap">
+						<input class="form-login__input form__input" type="text" name="First Name" tabindex="2" placeholder="First Name">
+					</div>
+					<div class="form-login__input-wrap form__input-wrap">
+						<input class="form-login__input form__input" type="text" name="Last Name" tabindex="3" placeholder="Last Name">
+					</div>
+					<div class="form-login__input-wrap form__input-wrap">
+						<input class="form-login__input form__input" type="password" name="Password" tabindex="4" placeholder="Password">
+					</div>
+					<button type="submit" class="form-login__btn form-login__btn_create">Create my account</button>
+				</div>
+
+				<div id="wholesale" class="form-login__input-container tab-content _active">
+					<div class="form-login__input-wrap form__input-wrap">
+						<input class="form-login__input form__input" type="email" name="Email" tabindex="1"
+							placeholder="Email">
+					</div>
+					<div class="form-login__input-wrap form__input-wrap">
+						<input class="form-login__input form__input" type="text" name="First Name" tabindex="2" placeholder="First Name">
+					</div>
+					<div class="form-login__input-wrap form__input-wrap">
+						<input class="form-login__input form__input" type="text" name="Last Name" tabindex="3" placeholder="Last Name">
+					</div>
+					<div class="form-login__input-wrap form__input-wrap">
+						<input class="form-login__input form__input" type="password" name="Password" tabindex="4" placeholder="Password">
+					</div>
+					<div class="form-login__input-wrap form__input form__input_no-hover">
+						<label class="form__file-btn">
+							<input class="form__input-file" type="file" name="First Name" tabindex="9" multiple
+								hidden>
+							<span>Update</span>
+						</label>
+						<p class="form__input-text">Add files</p>
+					</div>
+					<button type="submit" class="form-login__btn form-login__btn_create">Create my account</button>
+				</div>
+			</div>
+		</form>
+
+		<div class="login__footer">
+			<p>Don't have an account?</p>
+			<a href="#" class="login__link">Create one</a>
+		</div>
+	</section>
+	<script src="./js/app.min.js" type="module"></script>
+</body>
+
+</html>

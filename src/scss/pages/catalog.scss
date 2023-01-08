@@ -409,7 +409,8 @@
 				pointer-events: auto;
 			}
 		}
-		&__btn-wrap {
+		&__btn-wrap,
+		&__btn {
 			@include d-flex-center;
 			justify-content: center;
 		}
@@ -419,8 +420,6 @@
 			margin: 0 0 75px;
 		}
 		&__btn {
-			@include d-flex-center;
-			justify-content: center;
 			gap: 12px;
 			width: 100%;
 			max-width: 330px;

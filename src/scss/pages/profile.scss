@@ -310,8 +310,10 @@
 		padding: 15px 26px 16px;
 		background: #FAF8F6;
 		transition: all 0.3s;
+		border: 1px solid transparent;
 		&:hover {
 			box-shadow: 0 0 5px #f3e2d1;
+			border-color:#f3e2d1;
 		}
 	}
 
@@ -482,6 +484,9 @@
 	.profile {
 		padding: 120px 0 60px;
 		&__nav {
+			display: none;
+		}
+		&__link::before {
 			display: none;
 		}
 	}

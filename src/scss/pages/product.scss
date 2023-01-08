@@ -170,6 +170,7 @@
 		display: block;
 		cursor: pointer;
 		z-index: 1;
+		transition: 0.2s;
 		&::before {
 			content: "";
 			position: absolute;
@@ -181,6 +182,9 @@
 			background: #FF7D4E;
 			border-radius: 100%;
 			transition: .3s all;
+		}
+		&:hover {
+			box-shadow: 0 0 5px #DEDEDE;
 		}
 	}
 	&__checkbox-input {
@@ -237,6 +241,7 @@
 		max-width: 330px;
 		font-size: 20px;
 		line-height: 24px;
+		transition: .2s;
 	}
 }
 

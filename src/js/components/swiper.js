@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+import Swiper, {Navigation, Pagination} from 'swiper';
 
 const chooseSlider = new Swiper('.slider-choose', {
 	slidesPerView: 'auto',
@@ -28,3 +28,26 @@ const commentsSlider = new Swiper('.slider-comments', {
 		}
 	}
 })
+
+const catalogSlider = new Swiper('.catalog-slider', {
+	modules: [Navigation, Pagination],
+	navigation: {
+		prevEl: '.catalog-slider__btn_prew',
+		nextEl: '.catalog-slider__btn_next'
+	},
+	pagination: {
+		el: '.catalog-slider__pagination'
+	},
+	slidesPerView: 'auto',
+	centeredSlides: true,
+	loop: true,
+	breakpoints: {
+		992: {
+			spaceBetween: 25
+		},
+		1220: {
+			spaceBetween: 50
+		}
+	}
+})
+

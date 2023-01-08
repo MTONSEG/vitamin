@@ -35,7 +35,6 @@ if (profile) {
 	})
 }
 
-
 // Аккордеон
 const accordion = document.querySelector('.accordion');
 
@@ -70,7 +69,6 @@ if (accordion) {
 	}
 }
 
-
 //Input File
 const inputFile = document.querySelector('.form__input-file');
 
@@ -91,13 +89,13 @@ if (inputFile) {
 }
 
 // Оформление заказа, аккордеон
-const totalHeader = document.querySelector('.total__header');
-const totalBody = document.querySelector('.total__body');
+const totalHeader = document.querySelector('.acc-header');
+const totalBody = document.querySelector('.acc-body');
 
 if (totalHeader) {
 	totalHeader.addEventListener('click', e => {
 		let scrollHeightBody = totalBody.scrollHeight;
-		let iconArrow = totalHeader.querySelector('.item-order__icon');
+		let iconArrow = totalHeader.querySelector('.acc-icon');
 
 		if (totalBody.style.maxHeight) {
 			totalBody.style.maxHeight = null;
@@ -119,4 +117,63 @@ if (autoshipText) {
 	if (displayWidth < 992) {
 		autoshipText.innerHTML = 'Deliver every';
 	}
+}
+
+//Открытие категорий на мобильном
+const showCategories = document.querySelector('.show');
+
+if (showCategories) {
+	let showBtn = showCategories.querySelector('.show-btn');
+	let showBody = showCategories.querySelector('.show-body');
+
+	showBtn.addEventListener('click', e => {
+		toggleClass(showBtn, '_active');
+		toggleClass(showBody, '_active');
+	})
+	
+	document.addEventListener('click', e => {
+		let whithinTarget = e.target.closest('.show');
+		let linkTarget = e.target.closest('.show-link');
+
+		if (!whithinTarget || linkTarget) {
+			removeClass(showBtn, '_active');
+			removeClass(showBody, '_active');
+		} 
+	})
+
+	let showLinks = showBody.querySelectorAll('.show-link');
+
+	for (let link of showLinks) {
+		link.addEventListener('click', e => {
+			let currentItem = showBtn.querySelector('.show-current');
+			currentItem.textContent = link.textContent;
+
+			e.preventDefault();
+		})
+	}
+}
+
+//Открытие всех карточек в каталоге
+const catalogAllList = document.querySelector('.all-item-list');
+
+if (catalogAllList) {
+	let catalogItems = Array.from(document.querySelectorAll('.all-item'));
+	let displayWidth = window.innerWidth;
+
+	if (displayWidth < 992) {
+		for (let i = 6; i < catalogItems.length; i++) {
+			catalogItems[i].style.display = 'none';
+		}
+	}
+
+	document.addEventListener('click', e => {
+		let viewBtn = e.target.closest('.view-btn');
+
+		if (viewBtn) {
+			for (let elem of catalogItems) {
+				elem.style.display = 'block';
+				viewBtn.style.display = 'none';
+			}
+		}
+	})
 }

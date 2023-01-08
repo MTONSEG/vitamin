@@ -1,287 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="img/icons/favicon-32.png" type="image/png">
-	<link type="image/png" sizes="16x16" rel="icon" href="./img/favicon.png">
-	<link media="all" rel="stylesheet" type="text/css" href="./css/style.min.css">
-	<title>Каталог товаров</title>
-</head>
+@@include('./html/head.html',{title: "Каталог товаров"})
 
 <body>
 	<div class="wrapper">
-		<header class="header">
-	<div class="container container_header">
-		<div class="header__row">
-			<div class="header__burger burger">
-				<span class="burger__icon"></span>
-			</div>
-
-			<a href="index.html" class="header__logo">
-				<img loading="lazy" src="img/icons/logo.svg" alt="Logo" class="header__logo-icon">
-			</a>
-			<nav class="header__nav">
-				<a href="#" class="header__link _profile">
-					<img loading="lazy" src="img/icons/profile.svg" alt="profile" class="header__icon">
-				</a>
-				<a href="#" class="header__link _cart cart-link">
-					<img loading="lazy" src="img/icons/cart.svg" alt="cart" class="header__icon">
-					<span></span>
-				</a>
-				<a href="#" class="header__btn btn btn_quiz">Take the quiz</a>
-			</nav>
-
-			<div class="menu">
-				<nav class="menu__header">
-					<div data-src="#profile" class="menu__user catalog">
-						<img loading="lazy" src="img/icons/profile.svg" alt="profile" class="header__icon">
-					</div>
-				</nav>
-				<div class="menu__body">
-					<ul class="menu__list">
-						<li data-src="#shop" class="menu__item catalog">
-							<span>Shop</span>
-							<img src="img/icons/arrow-menu.svg" alt="arrow" class="menu__item-icon">
-						</li>
-						<li data-src="#info" class="menu__item catalog">
-							<span>Information</span>
-							<img src="img/icons/arrow-menu.svg" alt="arrow" class="menu__item-icon">
-						</li>
-						<a href="quiz.html" class="menu__item menu__item_quiz">Take the quiz</a>
-					</ul>
-					<div class="menu__footer">
-						<a href="mailto:support@medstogo.com" class="menu__email">
-							support@medstogo.com
-						</a>
-						<p class="menu__copy copy">
-							© 2020 Vitamins.com / All rights reserved
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div id="shop" class="submenu">
-				<div class="menu__header submenu__header">
-					<a href="#" class="submenu__back">
-						<img loading="lazy" src="img/icons/menu-back.svg" alt="back" class="submenu__back-icon">
-					</a>
-					<h1 class="submenu__title">
-						Shop
-					</h1>
-				</div>
-				<div class="menu__body">
-					<div class="menu__list">
-						<a href="#" class="menu__item">All categories</a>
-						<a href="#" class="menu__item">Vitamins & Dietary Supplements</a>
-						<a href="#" class="menu__item">Weight Loss</a>
-						<a href="#" class="menu__item">Minerals</a>
-						<a href="#" class="menu__item">Antioxidants</a>
-						<a href="#" class="menu__item">Probiotics</a>
-						<a href="#" class="menu__item">Pain Relief</a>
-						<a href="#" class="menu__item">Prenatal Vitamins</a>
-						<a href="#" class="menu__item menu__item_red">Sale%</a>
-					</div>
-					<div class="menu__footer">
-						<h3 class="submenu__footer-title">
-							Don’t know what vitamins your body needs?
-						</h3>
-						<p class="submenu__footer-text">
-							Answer a few simple questions and automaticallyget a personalazed list of vitamins in minutes
-						</p>
-						<a href="#" class="submenu__btn btn">
-							Take the quiz
-						</a>
-					</div>
-				</div>
-			</div>
-			<div id="info" class="submenu">
-				<div class="menu__header submenu__header">
-					<a href="#" class="submenu__back">
-						<img loading="lazy" src="img/icons/menu-back.svg" alt="back" class="submenu__back-icon">
-					</a>
-					<h1 class="submenu__title">
-						Information
-					</h1>
-				</div>
-				<div class="menu__body">
-					<div class="menu__list menu__list_no-border">
-						<a href="#" class="menu__item">Subscription Cycle & Billing</a>
-						<a href="#" class="menu__item">Terms & Conditions</a>
-						<a href="#" class="menu__item">Privacy Policy</a>
-						<a href="#" class="menu__item">Shipping & Delivery</a>
-						<a href="#" class="menu__item">Return Policy</a>
-					</div>
-				</div>
-			</div>
-			<div id="profile" class="submenu">
-				<div class="menu__header submenu__header">
-					<a href="#" class="submenu__back">
-						<img src="img/icons/menu-back.svg" alt="back" class="submenu__back-icon">
-					</a>
-					<h1 class="submenu__title">
-						Profile
-					</h1>
-				</div>
-				<div class="menu__body">
-					<div class="menu__list menu__list_no-border">
-						<a href="#" class="menu__item">Subscriptions</a>
-						<a href="#" class="menu__item">Orders</a>
-						<a href="#" class="menu__item">Account Overview</a>
-						<a href="#" class="menu__item">Payment methods</a>
-						<a href="#" class="menu__item">Change Password</a>
-						<a href="#" class="menu__item menu__item_red">Sign Out</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
-<div class="cart">
-	<div class="cart__header">
-		<h3 class="cart__title">
-			Cart
-		</h3>
-		<a href="#" class="cart__close">
-			<img loading="lazy" src="img/icons/menu-close.svg" alt="close" class="cart__close-icon">
-		</a>
-	</div>
-	<div class="cart__body">
-		<ul class="cart__list">
-
-			<li class="cart__item item-cart">
-				<div class="item-cart__image-wrap _pink">
-					<img loading="lazy" src="img/cart_item-1.png" alt="Image Bottle" class="item-cart__image">
-				</div>
-				<div class="item-cart__body">
-					<div class="item-cart__head">
-						<h3 class="item-cart__title">
-							Ortho Molecular Products CereVive Capsules
-						</h3>
-						<a href="#" class="item-cart__del">
-							<img loading="lazy" src="img/icons/del.svg" alt="delete" class="item-cart__del-icon">
-						</a>
-					</div>
-					<div class="item-cart__amount">
-						<div class="item-cart__quantity quantity">
-							<button class="quantity__btn _minus">
-								<img loading="lazy" src="img/icons/minus.svg" alt="minus">
-							</button>
-							<input type="number" step="1" min="1" max="27" name="quantity" value="1" class="quantity__input">
-							<button class="quantity__btn  _plus">
-								<img loading="lazy" src="img/icons/plus.svg" alt="plus">
-							</button>
-						</div>
-						<p class="item-cart__price">
-							$84.00
-						</p>
-					</div>
-					<div class="item-cart__footer">
-						<div class="item-cart__checkbox checkbox">
-							<input type="checkbox" id="checkbox" class="checkbox__input">
-							<label for="checkbox" class="checkbox__custom">
-								Autoship every
-							</label>
-						</div>
-						<div class="item-cart__select">
-							<div class="select">
-								<div class="select__header">
-									<div class="select__current">30</div>
-									<img loading="lazy" src="img/icons/select_arr.svg" alt="icon" class="select__icon">
-								</div>
-								<ul class="select__body">
-									<li class="select__item">
-										<span>5</span>
-									</li>
-									<li class="select__item">
-										<span>15</span>
-									</li>
-									<li class="select__item">
-										<span>30</span>
-									</li>
-								</ul>
-							</div>
-							<p class="item-cart__select-text">days</p>
-						</div>
-					</div>
-				</div>
-			</li>
-
-			<li class="cart__item item-cart">
-				<div class="item-cart__image-wrap _purple">
-					<img loading="lazy" src="img/cart_item-2.png" alt="Image Bottle" class="item-cart__image">
-				</div>
-				<div class="item-cart__body">
-					<div class="item-cart__head">
-						<h3 class="item-cart__title">
-							Standard Process Thymus PMG 90 Tablets
-						</h3>
-						<a href="#" class="item-cart__del">
-							<img loading="lazy" src="img/icons/del.svg" alt="delete" class="item-cart__del-icon">
-						</a>
-					</div>
-					<div class="item-cart__amount">
-						<div class="item-cart__quantity quantity">
-							<button class="quantity__btn _minus">
-								<img loading="lazy" src="img/icons/minus.svg" alt="minus">
-							</button>
-							<input type="number" step="1" min="1" max="27" name="quantity" value="1" class="quantity__input">
-							<button class="quantity__btn  _plus">
-								<img loading="lazy" src="img/icons/plus.svg" alt="plus">
-							</button>
-						</div>
-						<p class="item-cart__price">
-							$84.00
-						</p>
-					</div>
-					<div class="item-cart__footer">
-						<div class="item-cart__checkbox checkbox">
-							<input type="checkbox" id="checkbox-2" class="checkbox__input">
-							<label for="checkbox-2" class="checkbox__custom">
-								Autoship every
-							</label>
-						</div>
-						<div class="item-cart__select">
-							<div class="select">
-								<div class="select__header">
-									<div class="select__current">30</div>
-									<img loading="lazy" src="img/icons/select_arr.svg" alt="icon" class="select__icon">
-								</div>
-								<ul class="select__body">
-									<li class="select__item">
-										<span>5</span>
-									</li>
-									<li class="select__item">
-										<span>15</span>
-									</li>
-									<li class="select__item">
-										<span>30</span>
-									</li>
-								</ul>
-							</div>
-							<p class="item-cart__select-text">days</p>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
-	<div class="cart__footer">
-		<a href="#" class="cart__btn btn">
-			<p class="cart__btn-text">
-				Check Out
-			</p>
-			<div class="cart__btn-point"></div>
-			<p class="cart__btn-price">
-				$156.58
-			</p>
-		</a>
-	</div>
-</div>
-<div class="cart-wrapper"></div>
-
+		@@include('./html/header-main.html',{})
 
 		<section class="catalog-slider">
 			<div class="catalog-slider__wrap swiper-wrapper">
@@ -299,12 +22,12 @@
 						</a>
 					</div>
 					<div class="banner__circle"></div>
-					<img src="img/banner-eclipse.svg" alt="Eclipse" class="banner__eclipse">
+					<img src="@img/banner-eclipse.svg" alt="Eclipse" class="banner__eclipse">
 					<div class="banner__image-block">
 						<picture>
-							<source media="(max-width: 375px)" srcset="img/banner-pic-1_m375.png">
-							<source media="(max-width: 991px)" srcset="img/banner-pic-1_m.png">
-							<img src="img/banner-pic-1.png" alt="Bottle Vitamins" class="banner__image">
+							<source media="(max-width: 375px)" srcset="@img/banner-pic-1_m375.png">
+							<source media="(max-width: 991px)" srcset="@img/banner-pic-1_m.png">
+							<img src="@img/banner-pic-1.png" alt="Bottle Vitamins" class="banner__image">
 						</picture>
 					</div>
 				</div>
@@ -326,8 +49,8 @@
 					<div class="banner__image-block banner__image-block_mod">
 						<div class="banner__image-wrap">
 							<picture>
-								<source media="(max-width: 991px)" srcset="img/banner-pic-2_m.png">
-								<img src="img/banner-pic-2.png" alt="Bottle Vitamins" class="banner__img">
+								<source media="(max-width: 991px)" srcset="@img/banner-pic-2_m.png">
+								<img src="@img/banner-pic-2.png" alt="Bottle Vitamins" class="banner__img">
 							</picture>
 						</div>
 					</div>
@@ -350,8 +73,8 @@
 					<div class="banner__image-block banner__image-block_mod">
 						<div class="banner__image-wrap">
 							<picture>
-								<source media="(max-width: 991px)" srcset="img/banner-pic-3_m.png">
-								<img src="img/banner-pic-3.png" alt="Bottle Vitamins" class="banner__img">
+								<source media="(max-width: 991px)" srcset="@img/banner-pic-3_m.png">
+								<img src="@img/banner-pic-3.png" alt="Bottle Vitamins" class="banner__img">
 							</picture>
 						</div>
 					</div>
@@ -370,7 +93,7 @@
 					<div class="catalog-body__nav show">
 						<div class="catalog-body__header-nav show-btn">
 							<p class="catalog-body__current show-current">All categories</p>
-							<img src="img/icons/arr-catal.svg" alt="icon" class="catalog-body__nav-icon show-icon">
+							<img src="@img/icons/arr-catal.svg" alt="icon" class="catalog-body__nav-icon show-icon">
 						</div>
 						<div class="catalog-body__items profile__nav show-body">
 							<a href="#" class="show-link profile__link _active">All categories</a>
@@ -387,7 +110,7 @@
 					<ul class="catalog-body__list list-pack__list all-item-list">
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -403,7 +126,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -419,7 +142,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -435,7 +158,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -451,7 +174,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -467,7 +190,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -483,7 +206,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -499,7 +222,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -515,7 +238,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -531,7 +254,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -547,7 +270,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -563,7 +286,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -579,7 +302,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -595,7 +318,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -611,7 +334,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -627,7 +350,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-1.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -643,7 +366,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -659,7 +382,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -675,7 +398,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -691,7 +414,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -707,7 +430,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-2.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-2.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category item-pack__category_green">
@@ -723,7 +446,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-3.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-3.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -739,7 +462,7 @@
 						</li>
 						<li class="list-pack__item item-pack item-pack_bg all-item">
 							<div class="item-pack__image-wrap">
-								<img loading="lazy" src="img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
+								<img loading="lazy" src="@img/pack_img-4.png" alt="Orho Molecular" class="item-pack__image">
 							</div>
 							<div class="item-pack__body">
 								<p class="item-pack__category">
@@ -757,7 +480,7 @@
 					<div class="catalog-body__btn-wrap">
 						<button class="catalog-body__btn btn view-btn">
 							<p>View more</p>
-							<img src="img/icons/arr-view-btn.svg" alt="icon">
+							<img src="@img/icons/arr-view-btn.svg" alt="icon">
 						</button>
 					</div>
 				</div>
@@ -784,8 +507,8 @@
 					<div class="banner__image-block banner__image-block_mod">
 						<div class="banner__image-wrap">
 							<picture>
-								<source media="(max-width: 991px)" srcset="img/banner-pic-3_m.png">
-								<img src="img/banner-pic-3.png" alt="Bottle Vitamins" class="banner__img">
+								<source media="(max-width: 991px)" srcset="@img/banner-pic-3_m.png">
+								<img src="@img/banner-pic-3.png" alt="Bottle Vitamins" class="banner__img">
 							</picture>
 						</div>
 					</div>
@@ -807,7 +530,7 @@
 							<div class="swiper-slide slider-comments__slide">
 								<div class="slider-comments__body">
 									<div class="slider-comments__rating">
-										<img loading="lazy" src="img/icons/Stars.png" alt="starts"
+										<img loading="lazy" src="@img/icons/Stars.png" alt="starts"
 											class="slider-comments__start">
 									</div>
 									<h3 class="slider-comments__title">
@@ -821,7 +544,7 @@
 								</div>
 								<div class="slider-comments__user">
 									<div class="slider-comments__image-wrap">
-										<img loading="lazy" src="img/comments_photo-1.jpg" alt="Photo"
+										<img loading="lazy" src="@img/comments_photo-1.jpg" alt="Photo"
 											class="slider-comments__image">
 									</div>
 									<p class="slider-comments__name">
@@ -833,7 +556,7 @@
 							<div class="swiper-slide slider-comments__slide">
 								<div class="slider-comments__body">
 									<div class="slider-comments__rating">
-										<img loading="lazy" src="img/icons/Stars.png" alt="starts"
+										<img loading="lazy" src="@img/icons/Stars.png" alt="starts"
 											class="slider-comments__start">
 									</div>
 									<h3 class="slider-comments__title">
@@ -847,7 +570,7 @@
 								</div>
 								<div class="slider-comments__user">
 									<div class="slider-comments__image-wrap">
-										<img loading="lazy" src="img/comments_photo-2.jpg" alt="Photo"
+										<img loading="lazy" src="@img/comments_photo-2.jpg" alt="Photo"
 											class="slider-comments__image">
 									</div>
 									<p class="slider-comments__name">
@@ -859,7 +582,7 @@
 							<div class="swiper-slide slider-comments__slide">
 								<div class="slider-comments__body">
 									<div class="slider-comments__rating">
-										<img loading="lazy" src="img/icons/Stars.png" alt="starts"
+										<img loading="lazy" src="@img/icons/Stars.png" alt="starts"
 											class="slider-comments__start">
 									</div>
 									<h3 class="slider-comments__title">
@@ -871,7 +594,7 @@
 								</div>
 								<div class="slider-comments__user">
 									<div class="slider-comments__image-wrap">
-										<img loading="lazy" src="img/comments_photo-3.jpg" alt="Photo"
+										<img loading="lazy" src="@img/comments_photo-3.jpg" alt="Photo"
 											class="slider-comments__image">
 									</div>
 									<p class="slider-comments__name">
@@ -884,122 +607,7 @@
 				</div>
 			</div>
 		</section>
-		<footer class="footer">
-	<div class="container">
-		<div class="footer__row">
-			<div class="footer__logo">
-				<a href="#" class="footer__logo-link">
-					<img loading="lazy" src="img/icons/logo_footer.svg" alt="Logo" class="footer__logo-img">
-				</a>
-			</div>
-			<div class="footer__body">
-				<div class="footer__block footer__block_shop">
-					<h3 class="footer__title">
-						Shop
-					</h3>
-					<div class="footer__shop-list">
-						<ul class="footer__list footer__list_shop">
-							<li class="footer__item footer__item_shop">
-								<a href="#" class="footer__link">
-									Vitamins & Dietary Supplements
-								</a>
-							</li>
-							<li class="footer__item footer__item_shop">
-								<a href="#" class="footer__link">
-									Weight Loss
-								</a>
-							</li>
-							<li class="footer__item footer__item_shop">
-								<a href="#" class="footer__link">
-									Minerals
-								</a>
-							</li>
-							<li class="footer__item footer__item_shop">
-								<a href="#" class="footer__link">
-									Antioxidants
-								</a>
-							</li>
-						</ul>
-						<ul class="footer__list footer__list_shop">
-							<li class="footer__item footer__item_shop">
-								<a href="#" class="footer__link">
-									Probiotics
-								</a>
-							</li>
-							<li class="footer__item footer__item_shop">
-								<a href="#" class="footer__link">
-									Pain Relief
-								</a>
-							</li>
-							<li class="footer__item footer__item_shop">
-								<a href="#" class="footer__link">
-									Prenatal Vitamins
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer__block">
-					<h3 class="footer__title">
-						Information
-					</h3>
-					<ul class="footer__list">
-						<li class="footer__item">
-							<a href="#" class="footer__link">
-								Terms & Conditions
-							</a>
-						</li>
-						<li class="footer__item">
-							<a href="#" class="footer__link">
-								Privacy Policy
-							</a>
-						</li>
-						<li class="footer__item">
-							<a href="#" class="footer__link">
-								Shipping & Delivery
-							</a>
-						</li>
-						<li class="footer__item">
-							<a href="#" class="footer__link">
-								Subscription Cycle & Billing
-							</a>
-						</li>
-						<li class="footer__item">
-							<a href="#" class="footer__link">
-								Return Policy
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="footer__block">
-					<h3 class="footer__title">
-						Contact
-					</h3>
-					<ul class="footer__list">
-						<li class="footer__item">
-							<a href="#" class="footer__link">
-								support@medstogo.com
-							</a>
-						</li>
-						<li class="footer__item">
-							<a href="#" class="footer__link _fb">
-								Facebook
-							</a>
-						</li>
-						<li class="footer__item">
-							<a href="#" class="footer__link _insta">
-								Instagram
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<p class="footer__copy copy">
-				© 2020 Vitamins.com / All rights reserved
-			</p>
-		</div>
-	</div>
-</footer>
+		@@include('./html/footer.html',{})
 	</div>
 	<script src="./js/app.min.js" type="module"></script>
 	<script src="./js/swiper.min.js" type="module"></script>

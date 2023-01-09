@@ -4111,6 +4111,28 @@ body._lock {
   line-height: 24px;
   margin-bottom: 40px;
 }
+.form-login__subtitle.lines {
+  display: flex;
+  align-items: center;
+}
+.form-login__subtitle.lines span {
+  flex: 0 0 auto;
+  margin: 0 30px;
+}
+.form-login__subtitle.lines::before, .form-login__subtitle.lines::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 40%;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.07);
+}
+.form-login__subtitle.lines::before {
+  left: 0;
+}
+.form-login__subtitle.lines::after {
+  right: 0;
+}
 .form-login__text {
   font-size: 16px;
   line-height: 28px;
@@ -4122,12 +4144,24 @@ body._lock {
 }
 .form-login__input-wrap {
   margin-bottom: 13px;
+  position: relative;
 }
 .form-login__input-wrap p {
   color: rgba(0, 0, 0, 0.3);
 }
 .form-login__input::placeholder {
   color: rgba(0, 0, 0, 0.3);
+}
+.form-login__forgot-link {
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form-login__forgot-link:hover {
+  color: #000;
 }
 .form-login__btn {
   font-family: "Effra";
@@ -4148,6 +4182,9 @@ body._lock {
 .form-login__btn_create {
   max-width: 100%;
   margin: 20px 0 0px;
+}
+.form-login__btn.mb {
+  margin-bottom: 40px;
 }
 .form-login__btn:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -4200,6 +4237,9 @@ body._lock {
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 40px;
+}
+.form-login__social-wrap.mb0 {
+  margin-bottom: 0;
 }
 .form-login__social-btn {
   width: 100%;

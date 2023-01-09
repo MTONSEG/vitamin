@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./html/head.html',{title: "Recovery Password"})
+
+<body>
+	<section class="login">
+		<img src="@img/icons/logo.svg" alt="logo" class="login__logo">
+
+		<div class="login__header">
+			<a href="index.html" class="submenu__back">
+				<img loading="lazy" src="@img/icons/menu-back.svg" alt="back" class="submenu__back-icon">
+			</a>
+			<h1 class="login__header-title">Account</h1>
+		</div>
+
+		<form action="#" class="login__form form-login">
+			<div class="form-login__container">
+				<h2 class="form-login__title">
+					Sign in with email
+				</h2>
+				<p class="form-login__text">
+					Please enter your e-mail and password:
+				</p>
+				<div class="form-login__input-container">
+					<div class="form-login__input-wrap form__input-wrap">
+						<input class="form-login__input form__input" type="email" name="Email" tabindex="1" placeholder="Email">
+					</div>
+					<div class="form-login__input-wrap form__input-wrap">
+						<input class="form-login__input form__input" type="password" name="Password" tabindex="2" placeholder="Password">
+						<a href="recovery.html" class="form-login__forgot-link">Forgot password?</a>
+					</div>
+					<button type="submit" class="form-login__btn form-login__btn_create mb">Sign in</button>
+				</div>
+
+				<h2 class="form-login__subtitle lines">
+					<span>or sign in with...</span> 
+				</h2>
+				<div class="form-login__social-wrap mb0">
+					<button class="form-login__social-btn">
+						<img src="@img/icons/google.svg" alt="Google Sign Up" class="form-login__social-icon">
+						<p>Google</p>
+					</button>
+					<button class="form-login__social-btn">
+						<img src="@img/icons/apple.svg" alt="Apple Sign Up" class="form-login__social-icon">
+						<p>Apple</p>
+					</button>
+					<button class="form-login__social-btn">
+						<img src="@img/icons/facebook.svg" alt="Facebook Sign Up" class="form-login__social-icon">
+						<p>Facebook</p>
+					</button>
+				</div>
+			</div>
+		</form>
+
+		
+
+		<div class="login__footer login__footer_sign">
+			<p>Don't have an account?</p>
+			<a href="signup.html" class="login__link">Create one</a>
+		</div>
+	</section>
+</body>
+
+</html>

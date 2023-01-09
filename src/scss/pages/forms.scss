@@ -59,6 +59,29 @@
 		font-size: 20px;
 		line-height: 24px;
 		margin-bottom: 40px;
+		&.lines {
+			@include d-flex-center;
+			span {
+				flex: 0 0 auto;
+				margin: 0 30px;
+			}
+			&::before,
+			&::after {
+				content: "";
+				// position: absolute;
+				display: block;
+				height: 1px;
+				width: 40%;
+				top: 50%;
+				background-color: $black007;
+			}
+			&::before {
+				left: 0;
+			}
+			&::after {
+				right: 0;
+			}
+		}
 	}
 	&__text {
 		font-size: 16px;
@@ -71,6 +94,7 @@
 	}
 	&__input-wrap {
 		margin-bottom: 13px;
+		position: relative;
 		p {
 			color: $black03;
 		}
@@ -78,6 +102,17 @@
 	&__input {
 		&::placeholder {
 			color: $black03;
+		}
+	}
+	&__forgot-link {
+		line-height: 19px;
+		color: $black05;
+		position: absolute;
+		right: 24px;
+		top: 50%;
+		transform: translateY(-50%);
+		&:hover {
+			color: #000;
 		}
 	}
 	&__btn {
@@ -98,6 +133,9 @@
 		&_create {
 			max-width: 100%;
 			margin: 20px 0 0px;
+		}
+		&.mb {
+			margin-bottom: 40px;
 		}
 		&:hover {
 			box-shadow: 0 0 5px $black05;
@@ -151,6 +189,9 @@
 		justify-content: space-between;
 		gap: 10px;
 		margin-bottom: 40px;
+		&.mb0 {
+			margin-bottom: 0;
+		}
 	}
 	&__social-btn {
 		width: 100%;

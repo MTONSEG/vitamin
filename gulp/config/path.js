@@ -18,6 +18,7 @@ export const path = {
 		js: `${srcFolder}/js/app.js`,
 		jsSwiper: `${srcFolder}/js/components/swiper.js`,
 		jsForms: `${srcFolder}/js/components/forms.js`,
+		jsQuiz: `${srcFolder}/js/components/quiz.js`,
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
 		svg: `${srcFolder}/img/**/*.svg`,
 		scss: `${srcFolder}/scss/style.scss`,

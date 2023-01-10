@@ -277,6 +277,9 @@
 		&__row {
 			height: 70px;
 			justify-content: flex-end;
+			&_quiz {
+				justify-content: space-between;
+			}
 		}
 		&__logo {
 			position: absolute;
@@ -285,6 +288,9 @@
 			&-icon {
 				height: 40px;
 				width: 33.6px;
+			}
+			&_quiz {
+				position: static;
 			}
 		}
 		&__link._profile,

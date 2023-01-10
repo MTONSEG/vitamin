@@ -54,3 +54,21 @@ export const jsForms = () => {
 		.pipe(app.gulp.dest(app.path.build.js))
 		.pipe(app.plugins.browsersync.stream());
 }
+
+export const jsQuiz = () => {
+	return app.gulp.src(app.path.src.jsQuiz, { sourcemaps: app.isDev })
+		.pipe(app.plugins.plumber(
+			app.plugins.notify.onError({
+				title: "JS",
+				message: "Error: <%= error.message %>"
+			}))
+		)
+		.pipe(webpack({
+			mode: app.isBuild ? 'production' : 'development',
+			output: {
+				filename: 'quiz.min.js',
+			}
+		}))
+		.pipe(app.gulp.dest(app.path.build.js))
+		.pipe(app.plugins.browsersync.stream());
+}

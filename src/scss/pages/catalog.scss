@@ -254,6 +254,8 @@
 		}
 	}
 	
+
+
 	.banner {
 		height: 100%;
 		min-height: 533px;
@@ -273,11 +275,14 @@
 			margin: 0;
 			padding: 0;
 			width: 100%;
+			&_mod {
+				background: none !important;
+			}
 		}
 		&__image-block {
 			max-width: 454px;
 			margin: 0 auto 15px;
-			background-image: none;
+			background: none !important;
 		}
 		&__image {
 			position: static;
